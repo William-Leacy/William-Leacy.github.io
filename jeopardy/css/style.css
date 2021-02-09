@@ -83,7 +83,7 @@ button {
     background-color: #EC9FF9;
     border: solid 3px;
     text-align: center;
-    font-size: xxx-large;
+    font-size: 2em;
 }
 
 .jeopardy-board {
@@ -94,7 +94,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: x-large;
+    font-size: 1em;
 
 }
 
@@ -126,7 +126,7 @@ button {
     border: solid 3px;
     border-color: black;
     color: white;
-    font-size: x-large;
+    font-size: 2em;
 }
 
 .catagory-list-of-scores-conatiner {
@@ -196,7 +196,7 @@ button {
     align-items: center;
     background-color: white;
     width: 10%;
-    font-size: x-large;
+    font-size: 2em;
     border: solid 1px;
     border-right: 0px;
 }
@@ -208,6 +208,37 @@ button {
     font-family: 'Anton', sans-serif;
     border: solid 1px;
     border-left: 0px;
+}
+
+.end-screen-container{
+    background-color: #3081FE;
+    height: 650px;
+    border: solid 1px;
+    border-radius: 5%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-screen-container {
+    background-color: #3081FE;
+    height: 650px;
+    border: solid 1px;
+    border-radius: 5%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /**
@@ -258,7 +289,7 @@ button {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        font-size: x-large
+        font-size: 2em;
     }
     .menu-button {
         width: 10%;
@@ -275,7 +306,7 @@ button {
         background-color: #EC9FF9;
         border: solid 3px;
         text-align: center;
-        font-size: xxx-large;
+        font-size: 2em;
     }
     .jeopardy-board {
         margin-top: 3%;
@@ -285,7 +316,7 @@ button {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        font-size: x-large;
+        font-size: 2em;
 
     }
     .catagory-container {
@@ -308,6 +339,7 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 1em;
     }
     .catagory-score-value-button {
         margin: auto;
@@ -316,7 +348,7 @@ button {
         border: solid 3px;
         border-color: black;
         color: white;
-        font-size: x-large;
+        font-size:x-large
     }
     .catagory-list-of-scores-conatiner {
         height: 70%;
@@ -377,7 +409,7 @@ button {
         align-items: center;
         background-color: white;
         width: 10%;
-        font-size: x-large;
+        font-size: 2em;
         border: solid 1px;
         border-right: 0px;
     }
@@ -388,5 +420,37 @@ button {
         font-family: 'Anton', sans-serif;
         border: solid 1px;
         border-left: 0px;
+    }
+
+    .end-screen-container{
+        background-color: #3081FE;
+        height: 800px;
+        border: solid 1px;
+        border-radius: 5%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+    }
+    .menu-screen-container {
+        background-color: #3081FE;
+        height: 800px;
+        border: solid 1px;
+        border-radius: 5%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 }
