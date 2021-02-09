@@ -1,4 +1,59 @@
 /* Test - check if css is linked up with index.hmtl */
+
+/**
+ * ----------------------------------------
+ * Default style for mobile 
+ * ----------------------------------------
+ */
+
 body {
     background-color: #002AD8;
+    font-family: 'Anton', sans-serif;
+}
+.modal-container {
+    background-color: #3081FE;
+    height: 700px;
+    border: solid 1px;
+    border-radius: 5%;
+    margin: auto;
+    width: 90%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.players-name-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/**
+    * ----------------------------------------
+    * Style for Desktop or device above 600px 
+    * ----------------------------------------
+    */
+@media (min-width: 600px) {
+    body {
+        background-color: #002AD8;
+        font-family: 'Anton', sans-serif;
+    }
+    .modal-container {
+        background-color: #3081FE;
+        height: 800px;
+        border: solid 1px;
+        border-radius: 5%;
+        margin: auto;
+        width: 90%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .players-name-input-container {
+        display: flex;
+        flex-direction: row;
+    }
 }
