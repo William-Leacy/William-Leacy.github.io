@@ -41,6 +41,10 @@ button {
     flex-direction: row;
     width: 50%;
 }
+.game-rules-text{
+    Margin: auto;
+    padding: 5%;
+}
 
 
 /**
@@ -74,5 +78,9 @@ button {
         display: flex;
         flex-direction: row;
         width: 50%;
+    }
+    .game-rules-text {
+        Margin: auto;
+        padding: 5%;
     }
 }
