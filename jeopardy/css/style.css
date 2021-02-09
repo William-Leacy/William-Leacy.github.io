@@ -10,15 +10,18 @@ body {
     background-color: #002AD8;
     font-family: 'Anton', sans-serif;
 }
+
 h1 {
     text-align: center;
 }
+
 button {
-    margin: auto;
+    /* margin: auto; */
     width: 90%;
     padding: 2%;
     font-family: 'Anton', sans-serif;
 }
+
 .modal-container {
     background-color: #3081FE;
     height: 700px;
@@ -37,15 +40,18 @@ button {
     display: flex;
     flex-direction: column;
 }
+
 .read-game-rules-container {
     display: flex;
     flex-direction: row;
     width: 50%;
 }
-.game-rules-text{
+
+.game-rules-text {
     Margin: auto;
     padding: 5%;
 }
+
 .game-information-container {
     background-color: #FEEB3B;
     border: solid 3px;
@@ -53,26 +59,155 @@ button {
     flex-direction: row;
     justify-content: center;
 }
-.player-information{
+
+.player-information {
     width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
-  .menu-button {
+}
+
+.menu-button {
     width: 10%;
     font-size: x-large;
     border: none;
-  }
-  .player-avatar {
+    margin: auto;
+}
+
+.player-avatar {
     font-size: xxx-large;
     padding: 3%;
-  }
-  .game-round-container {
-    background-color: #EC9FF9; 
+}
+
+.game-round-container {
+    background-color: #EC9FF9;
     border: solid 3px;
     text-align: center;
     font-size: xxx-large;
+}
+
+.jeopardy-board {
+    margin-top: 3%;
+    width: 100%;
+    background-color: #3081FE;
+    border: solid 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: x-large;
+
+}
+
+.catagory-container {
+    background-color: #3081FE;
+    height: 800px;
+    border: solid 3px;
+    text-align: center;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catagory-name {
+    height: 20%;
+    background-color: #3081FE;
+    border: solid 3px;
+    border-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catagory-score-value-button {
+    font-family: 'Anton', sans-serif;
+    background-color: #3081FE;
+    border: solid 3px;
+    border-color: black;
+    color: white;
+    font-size: x-large;
+}
+
+.catagory-list-of-scores-conatiner {
+    height: 70%;
+    background-color: #3081FE;
+    border-color: black;
+    border: solid 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.question-modal-container {
+    background-color: #3081FE;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 650px;
+    border: solid 1px;
+    border-radius: 5%;
+
+    width: 90%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.question-container {
+    background-color: white;
+    padding: 2%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: left;
+}
+
+.list-of-questions-answers-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    padding: 2%;
+}
+
+.question-heading-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.answer-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 10%;
+    font-size: x-large;
+    border: solid 1px;
+    border-right: 0px;
+}
+
+.question-answer-button {
+    background-color: white;
+    width: 90%;
+    padding: 2%;
+    font-family: 'Anton', sans-serif;
+    border: solid 1px;
+    border-left: 0px;
 }
 
 /**
@@ -111,7 +246,6 @@ button {
         Margin: auto;
         padding: 5%;
     }
-
     .game-information-container {
         background-color: #FEEB3B;
         border: solid 3px;
@@ -119,79 +253,140 @@ button {
         flex-direction: row;
         justify-content: center;
     }
-  .player-information{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
+    .player-information {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: x-large
+    }
+    .menu-button {
+        width: 10%;
+        font-size: x-large;
+        border: none;
+        margin: auto;
+    }
+    .player-avatar {
+        font-size: xxx-large;
+        padding: 3%;
+    }
+
+    .game-round-container {
+        background-color: #EC9FF9;
+        border: solid 3px;
+        text-align: center;
+        font-size: xxx-large;
+    }
+    .jeopardy-board {
+        margin-top: 3%;
+        width: 100%;
+        background-color: #3081FE;
+        border: solid 3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: x-large;
+
+    }
+    .catagory-container {
+        background-color: #3081FE;
+        height: 400px;
+        width: 20%;
+        border: solid 3px;
+        text-align: center;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .catagory-name {
+        height: 20%;
+        background-color: #3081FE;
+        border: solid 3px;
+        border-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .catagory-score-value-button {
+        margin: auto;
+        font-family: 'Anton', sans-serif;
+        background-color: #3081FE;
+        border: solid 3px;
+        border-color: black;
+        color: white;
+        font-size: x-large;
+    }
+    .catagory-list-of-scores-conatiner {
+        height: 70%;
+        background-color: #3081FE;
+        border-color: black;
+        border: solid 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    .question-modal-container {
+        background-color: #3081FE;
+        height: 800px;
+        border: solid 1px;
+        border-radius: 5%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+    .question-container {
+        background-color: white;
+        padding: 1%;
+        /* display: flex;
     justify-content: center;
-    font-size:  x-large
-  }
-  .menu-button {
-    width: 10%;
-    font-size: x-large;
-    border: none;
-  }
-  .player-avatar {
-    font-size: xxx-large;
-    padding: 3%;
-  }
-  .game-round-container {
-      background-color: #EC9FF9; 
-      border: solid 3px;
-      text-align: center;
-      font-size: xxx-large;
-  }
+    align-items: center; */
+        text-align: left;
+    }
+    .list-of-questions-answers-container {
 
-.jeopardy-board{
-    margin-top: 3%;
- width: 100%;
- background-color: #3081FE;
- border: solid 3px;
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- font-size: x-large;
-
-}
-.catagory-container{
-    background-color: #3081FE;
-    height: 400px;
-    width: 20%;
-    border: solid 3px;
-    text-align: center;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.catagory-name{
-    height: 20%;
-    background-color: #3081FE;
-    border: solid 3px;
-    border-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.catagory-score-value-button{
-    font-family: 'Anton', sans-serif;
-    background-color: #3081FE;
-    border: solid 3px;
-    border-color: black;
-    color: white;
-    font-size: x-large;
-}
-
-.catagory-list-of-scores-conatiner {
-    height: 70%;
-    background-color: #3081FE;
-    border-color: black;
-    border: solid 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 50%;
+    }
+    .question-heading-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .answer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .answer-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 10%;
+        font-size: x-large;
+        border: solid 1px;
+        border-right: 0px;
+    }
+    .question-answer-button {
+        background-color: white;
+        width: 90%;
+        padding: 2%;
+        font-family: 'Anton', sans-serif;
+        border: solid 1px;
+        border-left: 0px;
+    }
 }
