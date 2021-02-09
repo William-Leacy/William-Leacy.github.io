@@ -17,6 +17,7 @@ button {
     margin: auto;
     width: 90%;
     padding: 2%;
+    font-family: 'Anton', sans-serif;
 }
 .modal-container {
     background-color: #3081FE;
@@ -45,7 +46,34 @@ button {
     Margin: auto;
     padding: 5%;
 }
-
+.game-information-container {
+    background-color: #FEEB3B;
+    border: solid 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.player-information{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .menu-button {
+    width: 10%;
+    font-size: x-large;
+    border: none;
+  }
+  .player-avatar {
+    font-size: xxx-large;
+    padding: 3%;
+  }
+  .game-round-container {
+    background-color: #EC9FF9; 
+    border: solid 3px;
+    text-align: center;
+    font-size: xxx-large;
+}
 
 /**
     * ----------------------------------------
@@ -83,4 +111,87 @@ button {
         Margin: auto;
         padding: 5%;
     }
+
+    .game-information-container {
+        background-color: #FEEB3B;
+        border: solid 3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+  .player-information{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size:  x-large
+  }
+  .menu-button {
+    width: 10%;
+    font-size: x-large;
+    border: none;
+  }
+  .player-avatar {
+    font-size: xxx-large;
+    padding: 3%;
+  }
+  .game-round-container {
+      background-color: #EC9FF9; 
+      border: solid 3px;
+      text-align: center;
+      font-size: xxx-large;
+  }
+
+.jeopardy-board{
+    margin-top: 3%;
+ width: 100%;
+ background-color: #3081FE;
+ border: solid 3px;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ font-size: x-large;
+
+}
+.catagory-container{
+    background-color: #3081FE;
+    height: 400px;
+    width: 20%;
+    border: solid 3px;
+    text-align: center;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.catagory-name{
+    height: 20%;
+    background-color: #3081FE;
+    border: solid 3px;
+    border-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.catagory-score-value-button{
+    font-family: 'Anton', sans-serif;
+    background-color: #3081FE;
+    border: solid 3px;
+    border-color: black;
+    color: white;
+    font-size: x-large;
+}
+
+.catagory-list-of-scores-conatiner {
+    height: 70%;
+    background-color: #3081FE;
+    border-color: black;
+    border: solid 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
 }
