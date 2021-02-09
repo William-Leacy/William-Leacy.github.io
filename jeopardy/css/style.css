@@ -10,6 +10,14 @@ body {
     background-color: #002AD8;
     font-family: 'Anton', sans-serif;
 }
+h1 {
+    text-align: center;
+}
+button {
+    margin: auto;
+    width: 90%;
+    padding: 2%;
+}
 .modal-container {
     background-color: #3081FE;
     height: 700px;
@@ -28,6 +36,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+.read-game-rules-container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
 
 /**
     * ----------------------------------------
@@ -54,6 +68,11 @@ body {
     }
     .players-name-input-container {
         display: flex;
+        flex-direction: column;
+    }
+    .read-game-rules-container {
+        display: flex;
         flex-direction: row;
+        width: 50%;
     }
 }
