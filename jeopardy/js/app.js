@@ -1942,6 +1942,8 @@ class Model {
     },
 
     ];
+    this.incorrectAnswers = [];
+
   }
 
   // create a list of all categoires avaible to play
@@ -1982,7 +1984,20 @@ class Model {
       console.log("incorrect");
     }
   }
-}
+  generateListOfRandomIncorrectAnswers() {
+    const answersInUse = [];
+    for (let i = 0; i < this.gameRoundOneQuestions.length; i++) {
+      for (let j = 0; j < this.gameRoundOneQuestions[i].gameQuestionSet.length; j++) {
+        answersInUse.push(this.gameRoundOneQuestions[i].gameQuestionSet[j].answer);
+      }
+    }
+    for (const question of this.listOfGameQuestions) {
+      if (answersInUse.includes(question.answer)) {} else {
+        this.incorrectAnswers.push(question.answer);
+      }
+    }
+  }
+  }
 
 class View {
   constructor() {
@@ -2278,3 +2293,4 @@ jeopardyGame.view.displayMainGameScoreBoard("will","100",1);
 console.log(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
 jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0],[],jeopardyGame.handleAnsweredQuestion,jeopardyGame.handleCheckIfAnswerIsCorrect);
 // jeopardyGame.model.updateAnsweredQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
+jeopardyGame.model.generateListOfRandomIncorrectAnswers();
