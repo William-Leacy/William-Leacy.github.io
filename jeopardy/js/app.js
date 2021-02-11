@@ -2040,9 +2040,11 @@ class View {
     $playerNameContainer.text(playerName);
 
     const $playerScoreContainer = $('<p>');
-    $playerScoreContainer.text(playerScore);
+    $playerScoreContainer.text('$'+playerScore);
+
     const $menuButton = $('<button>');
     $menuButton.addClass('menu-button').html('&#9776'); 
+    // set listner
 
     const $roundNumberContainer = $('<div>');
     $roundNumberContainer.addClass('game-round-container').text("Round " + roundNumber);
@@ -2076,7 +2078,6 @@ class View {
         const $button = $('<div>');
         // set text for button from array
         $button.addClass('catagory-score-value-button').text(gameQuestionSet[i].gameQuestionSet[j].questionValue);
-        //TODO
         // if check if button was used from dont set the listener and hide text with css
         if(gameQuestionSet[i].gameQuestionSet[j].questionIsAnswered === false){
           console.log(gameQuestionSet[i].gameQuestionSet[j].questionIsAnswered);
@@ -2186,6 +2187,14 @@ class View {
 
   
   }
+  displayGameMenu() {
+    const $gameMenuContainer = $('<div>');
+    $gameMenuContainer.addClass('menu-screen-container');
+    const $resetGameButton = $('<button>');
+    $resetGameButton.text('Reset Game');
+    $(this.gameContainer).append($gameMenuContainer);
+    $gameMenuContainer.append($resetGameButton);
+  }
 }
 class Controller {
   constructor(model, view) {
@@ -2215,7 +2224,8 @@ const jeopardyGame = new Controller(new Model(), new View());
 // jeopardyGame.model.generateRandomQuestionFromCategory();
 // console.log(jeopardyGame.model.gameRoundOneQuestions);
 // jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
-jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
+// jeopardyGame.view.displayGameMenu();
+// jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
 // jeopardyGame.view.displayEndGameScreen(-100);
 // jeopardyGame.view.displayReadGameRulesPromptScreen();
 // jeopardyGame.handleUpdatePlayerName('will');
