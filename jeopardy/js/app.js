@@ -1,8 +1,20 @@
 /* eslint-disable max-classes-per-file */
 class Model {
   constructor() {
-    this.playerName = 'player1';
-    this.playerScore = 0;
+    this.players = [
+      {
+        playerId: "1",
+        playerName: 'player1',
+        playerScore: 0,
+      },
+      {
+        playerId: "2",
+        playerName: 'player2',
+        playerScore: 0,
+      }
+    ];
+    this.currentPlayer = this.players[0];
+
     this.roundNumber = 1;
     this.listOfGameQuestions = [{
       question: 'geography-question-text-set-A',
@@ -1704,35 +1716,35 @@ class Model {
       gameQuestionSet: [{
         question: 'Science-question-text-set-D',
         answer: 'Science-question-set-D',
-        questionValue: '100',
+        questionValue: '10',
         category: 'Science',
         questionIsAnswered: false,
       },
       {
         question: 'Science-question-text-set-B',
         answer: 'Science-question-set-B',
-        questionValue: '200',
+        questionValue: '20',
         category: 'Science',
         questionIsAnswered: false,
       },
       {
         question: 'Science-question-text-set-B',
         answer: 'Science-question-set-B',
-        questionValue: '300',
+        questionValue: '30',
         category: 'Science',
         questionIsAnswered: false,
       },
       {
         question: 'Science-question-text-set-A',
         answer: 'Science-question-set-A',
-        questionValue: '400',
+        questionValue: '40',
         category: 'Science',
         questionIsAnswered: false,
       },
       {
         question: 'Science-question-text-set-A',
         answer: 'Science-question-set-A',
-        questionValue: '500',
+        questionValue: '50',
         category: 'Science',
         questionIsAnswered: false,
       },
@@ -1745,35 +1757,35 @@ class Model {
       gameQuestionSet: [{
         question: 'Films-question-text-set-D',
         answer: 'Films-question-set-D',
-        questionValue: '100',
+        questionValue: '10',
         category: 'Films',
         questionIsAnswered: false,
       },
       {
         question: 'Films-question-text-set-B',
         answer: 'Films-question-set-B',
-        questionValue: '200',
+        questionValue: '20',
         category: 'Films',
         questionIsAnswered: false,
       },
       {
         question: 'Films-question-text-set-B',
         answer: 'Films-question-set-B',
-        questionValue: '300',
+        questionValue: '30',
         category: 'Films',
         questionIsAnswered: false,
       },
       {
         question: 'Films-question-text-set-A',
         answer: 'Films-question-set-A',
-        questionValue: '400',
+        questionValue: '40',
         category: 'Films',
         questionIsAnswered: false,
       },
       {
         question: 'Films-question-text-set-A',
         answer: 'Films-question-set-A',
-        questionValue: '500',
+        questionValue: '50',
         category: 'Films',
         questionIsAnswered: false,
       },
@@ -1786,35 +1798,35 @@ class Model {
       gameQuestionSet: [{
         question: 'Culture-question-text-set-D',
         answer: 'Culture-question-set-D',
-        questionValue: '100',
+        questionValue: '10',
         category: 'Culture',
         questionIsAnswered: false,
       },
       {
         question: 'Culture-question-text-set-B',
         answer: 'Culture-question-set-B',
-        questionValue: '200',
+        questionValue: '20',
         category: 'Culture',
         questionIsAnswered: false,
       },
       {
         question: 'Culture-question-text-set-B',
         answer: 'Culture-question-set-B',
-        questionValue: '300',
+        questionValue: '30',
         category: 'Culture',
         questionIsAnswered: false,
       },
       {
         question: 'Culture-question-text-set-A',
         answer: 'Culture-question-set-A',
-        questionValue: '400',
+        questionValue: '40',
         category: 'Culture',
         questionIsAnswered: false,
       },
       {
         question: 'Culture-question-text-set-A',
         answer: 'Culture-question-set-A',
-        questionValue: '500',
+        questionValue: '50',
         category: 'Culture',
         questionIsAnswered: false,
       },
@@ -1827,35 +1839,35 @@ class Model {
       gameQuestionSet: [{
         question: 'General Knowledge-question-text-set-D',
         answer: 'General Knowledge-question-set-D',
-        questionValue: '100',
+        questionValue: '10',
         category: 'General Knowledge',
         questionIsAnswered: false,
       },
       {
         question: 'General Knowledge-question-text-set-B',
         answer: 'General Knowledge-question-set-B',
-        questionValue: '200',
+        questionValue: '20',
         category: 'General Knowledge',
         questionIsAnswered: false,
       },
       {
         question: 'General Knowledge-question-text-set-B',
         answer: 'General Knowledge-question-set-B',
-        questionValue: '300',
+        questionValue: '30',
         category: 'General Knowledge',
         questionIsAnswered: false,
       },
       {
         question: 'General Knowledge-question-text-set-A',
         answer: 'General Knowledge-question-set-A',
-        questionValue: '400',
+        questionValue: '40',
         category: 'General Knowledge',
         questionIsAnswered: false,
       },
       {
         question: 'General Knowledge-question-text-set-A',
         answer: 'General Knowledge-question-set-A',
-        questionValue: '500',
+        questionValue: '50',
         category: 'General Knowledge',
         questionIsAnswered: false,
       },
@@ -1868,35 +1880,35 @@ class Model {
       gameQuestionSet: [{
         question: 'Music-question-text-set-D',
         answer: 'Music-question-set-D',
-        questionValue: '100',
+        questionValue: '10',
         category: 'Music',
         questionIsAnswered: false,
       },
       {
         question: 'Music-question-text-set-B',
         answer: 'Music-question-set-B',
-        questionValue: '200',
+        questionValue: '20',
         category: 'Music',
         questionIsAnswered: false,
       },
       {
         question: 'Music-question-text-set-B',
         answer: 'Music-question-set-B',
-        questionValue: '300',
+        questionValue: '30',
         category: 'Music',
         questionIsAnswered: false,
       },
       {
         question: 'Music-question-text-set-A',
         answer: 'Music-question-set-A',
-        questionValue: '400',
+        questionValue: '40',
         category: 'Music',
         questionIsAnswered: false,
       },
       {
         question: 'Music-question-text-set-A',
         answer: 'Music-question-set-A',
-        questionValue: '500',
+        questionValue: '50',
         category: 'Music',
         questionIsAnswered: false,
       },
@@ -1907,35 +1919,35 @@ class Model {
       gameQuestionSet: [{
         question: 'Music-question-text-set-D',
         answer: 'Music-question-set-D',
-        questionValue: '100',
+        questionValue: '10',
         category: 'Music',
         questionIsAnswered: true,
       },
       {
         question: 'Music-question-text-set-B',
         answer: 'Music-question-set-B',
-        questionValue: '200',
+        questionValue: '20',
         category: 'Music',
         questionIsAnswered: true,
       },
       {
         question: 'Music-question-text-set-B',
         answer: 'Music-question-set-B',
-        questionValue: '300',
+        questionValue: '30',
         category: 'Music',
         questionIsAnswered: true,
       },
       {
         question: 'Music-question-text-set-A',
         answer: 'Music-question-set-A',
-        questionValue: '400',
+        questionValue: '40',
         category: 'Music',
         questionIsAnswered: false,
       },
       {
         question: 'Music-question-text-set-A',
         answer: 'Music-question-set-A',
-        questionValue: '500',
+        questionValue: '50',
         category: 'Music',
         questionIsAnswered: false,
       },
@@ -1997,10 +2009,20 @@ class Model {
     console.log(answerChoosen.answer);
     if(answerChoosen.answer === correctAnswer){
       console.log("correct");
-      this.playerScore = this.playerScore + parseInt(answerChoosen.questionValue, 10);
+      this.currentPlayer.playerScore = this.currentPlayer.playerScore + parseInt(answerChoosen.questionValue, 10);
     } else {
-      this.playerScore = this.playerScore -  parseInt(answerChoosen.questionValue, 10);
+      this.currentPlayer.playerScore = this.currentPlayer.playerScore -  parseInt(answerChoosen.questionValue, 10);
       console.log("incorrect");
+    }
+  }
+  updateCurrentPlayer() {
+    console.log(this.currentPlayer);
+    if(this.currentPlayer === this.players[0]){
+      this.currentPlayer = this.players[1];
+      console.log(this.currentPlayer);
+    } else {
+      this.currentPlayer = this.players[0];
+      console.log(this.currentPlayer);
     }
   }
 
@@ -2085,28 +2107,39 @@ class View {
  * 
  * 
  */
-  displayMainGameScoreBoard(playerName,playerScore,roundNumber) {
+  displayMainGameScoreBoard(players,roundNumber) {
     const $mainGameScreenContainer = $('<div>');
     $mainGameScreenContainer.attr('id','mainGameContainer');
     $mainGameScreenContainer.addClass('main-game-container');
 
     const $gameInfromationContainer = $('<div>');
     $gameInfromationContainer.addClass('game-information-container');
+    $(this.gameContainer).append($mainGameScreenContainer);
+    $mainGameScreenContainer.append($gameInfromationContainer);
 
-    const $playerInformation = $('<div>');
-    $playerInformation.addClass('player-information');
+    for (let i = 0; i < 2; i++) {
+      const $playerInformation = $('<div>');
+      $playerInformation.addClass('player-information');
 
-    const $playerAvatar = $('<div>');
-    $playerAvatar.addClass('player-avatar').html('&#x1F600');
+      const $playerAvatar = $('<div>');
+      $playerAvatar.addClass('player-avatar').html('&#x1F600');
 
-    const $playerNamePlayerScoreContainer = $('<div>');
-    $playerNamePlayerScoreContainer.addClass('player-name-player-score-container');
+      const $playerNamePlayerScoreContainer = $('<div>');
+      $playerNamePlayerScoreContainer.addClass('player-name-player-score-container');
 
-    const $playerNameContainer = $('<p>');
-    $playerNameContainer.text(playerName);
+      const $playerNameContainer = $('<p>');
+      $playerNameContainer.text(players[i].playerName);
 
-    const $playerScoreContainer = $('<p>');
-    $playerScoreContainer.text('$'+playerScore);
+      const $playerScoreContainer = $('<p>');
+      $playerScoreContainer.text('$' + players[i].playerScore);
+      $gameInfromationContainer.append($playerInformation);
+      $playerInformation.append($playerAvatar);
+      $playerInformation.append($playerNamePlayerScoreContainer);
+      $playerNamePlayerScoreContainer.append($playerNameContainer);
+      $playerNamePlayerScoreContainer.append($playerScoreContainer);
+
+    }
+
 
     const $menuButton = $('<button>');
     $menuButton.addClass('menu-button').html('&#9776'); 
@@ -2115,13 +2148,8 @@ class View {
     const $roundNumberContainer = $('<div>');
     $roundNumberContainer.addClass('game-round-container').text("Round " + roundNumber);
 
-    $(this.gameContainer).append($mainGameScreenContainer);
-    $mainGameScreenContainer.append($gameInfromationContainer);
-    $gameInfromationContainer.append($playerInformation);
-    $playerInformation.append($playerAvatar);
-    $playerInformation.append($playerNamePlayerScoreContainer);
-    $playerNamePlayerScoreContainer.append($playerNameContainer);
-    $playerNamePlayerScoreContainer.append($playerScoreContainer);
+
+
     $gameInfromationContainer.append($menuButton);
     $($mainGameScreenContainer).append($roundNumberContainer);
   }
@@ -2335,8 +2363,9 @@ class Controller {
   handleAnsweredQuestion = (questionAnswered) => {
     console.log(questionAnswered);
     this.model.updateAnsweredQuestion(questionAnswered);
+    this.model.updateCurrentPlayer();
     this.view.clearDisplay();
-    this.view.displayMainGameScoreBoard(this.model.playerName,this.model.playerScore,this.model.roundNumber);
+    this.view.displayMainGameScoreBoard(this.model.players,this.model.playerScore,this.model.roundNumber);
     this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore);
   }
 
@@ -2355,7 +2384,7 @@ class Controller {
  */
   handleChoosenCatagoryScore = (choosenCatagoryScore) => {
     this.view.clearDisplay();
-    this.view.displayMainGameScoreBoard(this.model.playerName,this.model.playerScore,this.model.roundNumber);
+    this.view.displayMainGameScoreBoard(this.model.players,this.model.playerScore,this.model.roundNumber);
     this.view.displayGameQuestion(choosenCatagoryScore,this.model.incorrectAnswers,this.handleAnsweredQuestion,this.handleCheckIfAnswerIsCorrect);
     console.log(choosenCatagoryScore);
   }
@@ -2378,8 +2407,8 @@ const jeopardyGame = new Controller(new Model(), new View());
 // jeopardyGame.handleUpdatePlayerName('will');
 // console.log(jeopardyGame.model.playerName);
 
-
-jeopardyGame.view.displayMainGameScoreBoard("will","100",1);
+jeopardyGame.model.updateCurrentPlayer();
+jeopardyGame.view.displayMainGameScoreBoard(jeopardyGame.model.players,1);
 jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,jeopardyGame.handleChoosenCatagoryScore);
 // jeopardyGame.view.displayGameMenu();
 // jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
@@ -2390,3 +2419,4 @@ console.log(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
 // jeopardyGame.model.generateListOfRandomIncorrectAnswers();
 // console.log(jeopardyGame.model.incorrectAnswers);
 // jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0],jeopardyGame.model.incorrectAnswers,jeopardyGame.handleAnsweredQuestion);
+
