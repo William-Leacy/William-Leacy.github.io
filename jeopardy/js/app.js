@@ -1908,21 +1908,21 @@ class Model {
         answer: 'Music-question-set-D',
         questionValue: '100',
         category: 'Music',
-        questionIsAnswered: false,
+        questionIsAnswered: true,
       },
       {
         question: 'Music-question-text-set-B',
         answer: 'Music-question-set-B',
         questionValue: '200',
         category: 'Music',
-        questionIsAnswered: false,
+        questionIsAnswered: true,
       },
       {
         question: 'Music-question-text-set-B',
         answer: 'Music-question-set-B',
         questionValue: '300',
         category: 'Music',
-        questionIsAnswered: false,
+        questionIsAnswered: true,
       },
       {
         question: 'Music-question-text-set-A',
@@ -2077,11 +2077,17 @@ class View {
         // set text for button from array
         $button.addClass('catagory-score-value-button').text(gameQuestionSet[i].gameQuestionSet[j].questionValue);
         //TODO
-        // if check if button was used from last round use .css
+        // if check if button was used from dont set the listener and hide text with css
+        if(gameQuestionSet[i].gameQuestionSet[j].questionIsAnswered === false){
+          console.log(gameQuestionSet[i].gameQuestionSet[j].questionIsAnswered);
         // set listner on each button 
         $($button).on('click', function () {
           scoreChoosenHandler()
         });
+        } else {
+          $button.css("color", "red");
+        }
+
         $catagoryListOfScoresContainer.append($button);
       }
     }
@@ -2198,7 +2204,7 @@ const jeopardyGame = new Controller(new Model(), new View());
 // console.log(jeopardyGame.model.gameRoundCategories);
 // jeopardyGame.model.generateRandomQuestionFromCategory();
 // console.log(jeopardyGame.model.gameRoundOneQuestions);
-// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
+jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
 // jeopardyGame.view.displayGameQuestion();
 // jeopardyGame.view.displayEndGameScreen(-100);
 // jeopardyGame.view.displayReadGameRulesPromptScreen();
