@@ -475,4 +475,10 @@ button {
         justify-content: space-evenly;
         align-items: center;
     }
+    .game-status-container{
+        background-color: #9ff9ba;
+        border: solid 3px;
+        text-align: center;
+        font-size: 2em;
+    }
 }
