@@ -1,6 +1,8 @@
 /* eslint-disable max-classes-per-file */
 class Model {
   constructor() {
+    this.playerName = 'player1';
+    this.playerScore = 0;
     this.listOfGameQuestions = [{
       question: 'geography-question-text-set-A',
       answer: 'geography-question-set-A',
@@ -1695,14 +1697,227 @@ class Model {
     ];
     this.fullListOfquestionCategoires = [];
     this.gameRoundCategories = [];
-    this.gameRoundQuestions = [];
+    this.gameRoundTwoQuestions = [];
+    this.gameRoundOneQuestions = [{
+      gameQuestionCategory: 'Science',
+      gameQuestionSet: [{
+        question: 'Science-question-text-set-D',
+        answer: 'Science-question-set-D',
+        questionValue: '100',
+        category: 'Science',
+      },
+      {
+        question: 'Science-question-text-set-B',
+        answer: 'Science-question-set-B',
+        questionValue: '200',
+        category: 'Science',
+      },
+      {
+        question: 'Science-question-text-set-B',
+        answer: 'Science-question-set-B',
+        questionValue: '300',
+        category: 'Science',
+      },
+      {
+        question: 'Science-question-text-set-A',
+        answer: 'Science-question-set-A',
+        questionValue: '400',
+        category: 'Science',
+      },
+      {
+        question: 'Science-question-text-set-A',
+        answer: 'Science-question-set-A',
+        questionValue: '500',
+        category: 'Science',
+      },
+
+      ],
+
+    },
+    {
+      gameQuestionCategory: 'Films',
+      gameQuestionSet: [{
+        question: 'Films-question-text-set-D',
+        answer: 'Films-question-set-D',
+        questionValue: '100',
+        category: 'Films',
+      },
+      {
+        question: 'Films-question-text-set-B',
+        answer: 'Films-question-set-B',
+        questionValue: '200',
+        category: 'Films',
+      },
+      {
+        question: 'Films-question-text-set-B',
+        answer: 'Films-question-set-B',
+        questionValue: '300',
+        category: 'Films',
+      },
+      {
+        question: 'Films-question-text-set-A',
+        answer: 'Films-question-set-A',
+        questionValue: '400',
+        category: 'Films',
+      },
+      {
+        question: 'Films-question-text-set-A',
+        answer: 'Films-question-set-A',
+        questionValue: '500',
+        category: 'Films',
+      },
+
+      ],
+
+    },
+    {
+      gameQuestionCategory: 'Culture',
+      gameQuestionSet: [{
+        question: 'Culture-question-text-set-D',
+        answer: 'Culture-question-set-D',
+        questionValue: '100',
+        category: 'Culture',
+      },
+      {
+        question: 'Culture-question-text-set-B',
+        answer: 'Culture-question-set-B',
+        questionValue: '200',
+        category: 'Culture',
+      },
+      {
+        question: 'Culture-question-text-set-B',
+        answer: 'Culture-question-set-B',
+        questionValue: '300',
+        category: 'Culture',
+      },
+      {
+        question: 'Culture-question-text-set-A',
+        answer: 'Culture-question-set-A',
+        questionValue: '400',
+        category: 'Culture',
+      },
+      {
+        question: 'Culture-question-text-set-A',
+        answer: 'Culture-question-set-A',
+        questionValue: '500',
+        category: 'Culture',
+      },
+
+      ],
+
+    },
+    {
+      gameQuestionCategory: 'General Knowledge',
+      gameQuestionSet: [{
+        question: 'General Knowledge-question-text-set-D',
+        answer: 'General Knowledge-question-set-D',
+        questionValue: '100',
+        category: 'General Knowledge',
+      },
+      {
+        question: 'General Knowledge-question-text-set-B',
+        answer: 'General Knowledge-question-set-B',
+        questionValue: '200',
+        category: 'General Knowledge',
+      },
+      {
+        question: 'General Knowledge-question-text-set-B',
+        answer: 'General Knowledge-question-set-B',
+        questionValue: '300',
+        category: 'General Knowledge',
+      },
+      {
+        question: 'General Knowledge-question-text-set-A',
+        answer: 'General Knowledge-question-set-A',
+        questionValue: '400',
+        category: 'General Knowledge',
+      },
+      {
+        question: 'General Knowledge-question-text-set-A',
+        answer: 'General Knowledge-question-set-A',
+        questionValue: '500',
+        category: 'General Knowledge',
+      },
+
+      ],
+
+    },
+    {
+      gameQuestionCategory: 'Music',
+      gameQuestionSet: [{
+        question: 'Music-question-text-set-D',
+        answer: 'Music-question-set-D',
+        questionValue: '100',
+        category: 'Music',
+      },
+      {
+        question: 'Music-question-text-set-B',
+        answer: 'Music-question-set-B',
+        questionValue: '200',
+        category: 'Music',
+      },
+      {
+        question: 'Music-question-text-set-B',
+        answer: 'Music-question-set-B',
+        questionValue: '300',
+        category: 'Music',
+      },
+      {
+        question: 'Music-question-text-set-A',
+        answer: 'Music-question-set-A',
+        questionValue: '400',
+        category: 'Music',
+      },
+      {
+        question: 'Music-question-text-set-A',
+        answer: 'Music-question-set-A',
+        questionValue: '500',
+        category: 'Music',
+      },
+      ],
+    },
+    {
+      gameQuestionCategory: 'Music',
+      gameQuestionSet: [{
+        question: 'Music-question-text-set-D',
+        answer: 'Music-question-set-D',
+        questionValue: '100',
+        category: 'Music',
+      },
+      {
+        question: 'Music-question-text-set-B',
+        answer: 'Music-question-set-B',
+        questionValue: '200',
+        category: 'Music',
+      },
+      {
+        question: 'Music-question-text-set-B',
+        answer: 'Music-question-set-B',
+        questionValue: '300',
+        category: 'Music',
+      },
+      {
+        question: 'Music-question-text-set-A',
+        answer: 'Music-question-set-A',
+        questionValue: '400',
+        category: 'Music',
+      },
+      {
+        question: 'Music-question-text-set-A',
+        answer: 'Music-question-set-A',
+        questionValue: '500',
+        category: 'Music',
+      },
+      ],
+    },
+
+    ];
   }
 
   // create a list of all categoires avaible to play
   generateListOfAllCategoires() {
     for (const question of this.listOfGameQuestions) {
       if (this.fullListOfquestionCategoires.includes(question.category)) {
-
       } else {
         this.fullListOfquestionCategoires.push(question.category);
       }
@@ -1718,28 +1933,159 @@ class Model {
       categoires.splice(categoires.indexOf(randomCategory), 1);
     }
   }
-}
 
-//
+  updatePlayerName(playerChoosenName) {
+    this.playerName = playerChoosenName;
+  }
+}
 
 class View {
   constructor() {
+    this.gameContainer = document.querySelector('#game-screen');
+    this.displayWelconeScreen = this.displayWelconeScreen.bind(this);
+  }
+
+  displayWelconeScreen(handler) {
+    const $welcomeScreen = $('<div>');
+    $welcomeScreen.addClass('modal-container');
+
+    const $welcomeTitle = $('<h1>').text('Lets play a game of Jeopardy!');
+
+    const $whoIsPLayingText = $('<h2>').text('Who is playing today?');
+
+    const $playersNameInputContainer = $('<div>');
+    $playersNameInputContainer.addClass('players-name-input-container');
+
+    const $playerNameInput = $('<input>');
+    const $nextButton = $('<button>').text('Next').attr('id', 'confirm-player-name-input-button');
+    $($nextButton).on('click',function(){handler($playerNameInput.val())});
+
+    $(this.gameContainer).append($welcomeScreen);
+    $welcomeScreen.append($welcomeTitle);
+
+    $welcomeScreen.append($whoIsPLayingText);
+    $welcomeScreen.append($playersNameInputContainer);
+    $playersNameInputContainer.append($playerNameInput);
+    $playersNameInputContainer.append($nextButton);
+  }
+
+  displayReadGameRulesPromptScreen() {
+    const $readGameRulesScreen = $('<div>');
+    $readGameRulesScreen.addClass('modal-container');
+
+    const $readGameRulesTitle = $('<h1>').text('Read game rules?');
+
+    const $readGameRulesContainer = $('<div>');
+    $readGameRulesContainer.addClass('read-game-rules-container');
+
+    const $yesButton = $('<button>').text('Yes').attr('id', 'yes-read-game-rules-button');
+    const $noButton = $('<button>').text('No').attr('id', 'yes-read-game-rules-button');
+
+    $(this.gameContainer).append($readGameRulesScreen);
+    $readGameRulesScreen.append($readGameRulesTitle);
+
+    $readGameRulesScreen.append($readGameRulesContainer);
+    $readGameRulesContainer.append($yesButton);
+    $readGameRulesContainer.append($noButton);
+  }
+
+  displayMainGameScreen(gameQuestionSet,playerName,playerScore,roundNumber,scoreChoosenHandler) {
+
+    const $mainGameScreenContainer = $('<div>');
+    $mainGameScreenContainer.addClass('main-game-container');
+
+    const $gameInfromationContainer = $('<div>');
+    $gameInfromationContainer.addClass('game-information-container');
+
+    const $playerInformation = $('<div>');
+    $playerInformation.addClass('player-information');
+
+    const $playerAvatar = $('<div>');
+    $playerAvatar.addClass('player-avatar').html('&#x1F600');
+
+    const $playerNamePlayerScoreContainer = $('<div>');
+    $playerNamePlayerScoreContainer.addClass('player-name-player-score-container');
+
+    const $playerNameContainer = $('<p>');
+    $playerNameContainer.text(playerName);
+
+    const $playerScoreContainer = $('<p>');
+    $playerScoreContainer.text(playerScore);
+    const $menuButton = $('<button>');
+    $menuButton.addClass('menu-button').html('&#9776'); 
+
+    const $roundNumberContainer = $('<div>');
+    $roundNumberContainer.addClass('game-round-container').text("Round " + roundNumber);
+
+    $(this.gameContainer).append($mainGameScreenContainer);
+    $mainGameScreenContainer.append($gameInfromationContainer);
+    $gameInfromationContainer.append($playerInformation);
+    $playerInformation.append($playerAvatar);
+    $playerInformation.append($playerNamePlayerScoreContainer);
+    $playerNamePlayerScoreContainer.append($playerNameContainer);
+    $playerNamePlayerScoreContainer.append($playerScoreContainer);
+    $gameInfromationContainer.append($menuButton);
+    $($mainGameScreenContainer).append($roundNumberContainer);
+
+    const $jeopardBoardContainer = $('<div>');
+    $jeopardBoardContainer.addClass('jeopardy-board');
+    $mainGameScreenContainer.append($jeopardBoardContainer);
+
+    for (let i = 0; i < 6; i++) {
+      const $catagorycolumnContainer = $('<div>');
+      $catagorycolumnContainer.addClass('catagory-container');
+      $jeopardBoardContainer.append($catagorycolumnContainer);
+      const $catagoryNameContainer = $('<div>');
+      $catagoryNameContainer.addClass('catagory-name').text(gameQuestionSet[i].gameQuestionCategory);
+      $catagorycolumnContainer.append($catagoryNameContainer);
+      const $catagoryListOfScoresContainer = $('<div>');
+      $catagoryListOfScoresContainer.addClass('catagory-list-of-scores-conatiner');
+      $catagorycolumnContainer.append($catagoryListOfScoresContainer);
+
+      for (let j = 0; j < 5; j++) {
+        const $button = $('<div>');
+        // set text for button from array
+        $button.addClass('catagory-score-value-button').text(gameQuestionSet[i].gameQuestionSet[j].questionValue);
+        //TODO
+        // if check if button was used from last round use .css
+        // set listner on each button 
+        $($button).on('click', function () {
+          scoreChoosenHandler()
+        });
+        $catagoryListOfScoresContainer.append($button);
+      }
+    }
   }
 }
 class Controller {
   constructor(model, view) {
     this.model = model;
     this.view = view;
+    // this.view.displayWelconeScreen(this.handlePlayerNameInput);
+  }
+
+  handleUpdatePlayerName = (text) => {
+    this.model.updatePlayerName(text);
+  }
+
+  handlePlayerNameInput = (playerNameEntered) => {
+  this.model.updatePlayerName(playerNameEntered);
   }
 }
 
 const jeopardyGame = new Controller(new Model(), new View());
 
-// console.log(jeopardyGame);
-
-jeopardyGame.model.generateListOfAllCategoires();
-jeopardyGame.model.randomGenrateRoundCategories();
+// Tests
+// jeopardyGame.model.generateListOfAllCategoires();
+// jeopardyGame.model.randomGenrateRoundCategories();
 // console.log(jeopardyGame.model.listOfGameQuestions);
 // console.log(jeopardyGame.model.fullListOfquestionCategoires);
-console.log(jeopardyGame.model.listOfGameQuestions);
-console.log(jeopardyGame.model.gameRoundCategories);
+// console.log(jeopardyGame.model.listOfGameQuestions);
+// console.log(jeopardyGame.model.gameRoundCategories);
+// jeopardyGame.model.generateRandomQuestionFromCategory();
+// console.log(jeopardyGame.model.gameRoundOneQuestions);
+jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
+// jeopardyGame.view.displayReadGameRulesPromptScreen();
+// jeopardyGame.handleUpdatePlayerName('will');
+// console.log(jeopardyGame.model.playerName);
+
