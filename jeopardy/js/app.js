@@ -2131,16 +2131,19 @@ class View {
  * 
  */
   displayMainGameScreen(gameQuestionSet,choosenCatagoryScoreHandler) {
-    // remove any screens after the scoreboard 
-    $('#mainGameContainer').eq(1).remove();
+
     const $jeopardBoardContainer = $('<div>');
     $jeopardBoardContainer.addClass('jeopardy-board');
     $('#mainGameContainer').append($jeopardBoardContainer);
 
+    const $jeopardBoardQuestionsContainer = $('<div>');
+    $jeopardBoardQuestionsContainer.addClass('jeopardy-questions-board');
+    $($jeopardBoardContainer).append($jeopardBoardQuestionsContainer);
+
     for (let i = 0; i < 6; i++) {
       const $catagorycolumnContainer = $('<div>');
       $catagorycolumnContainer.addClass('catagory-container');
-      $jeopardBoardContainer.append($catagorycolumnContainer);
+      $jeopardBoardQuestionsContainer.append($catagorycolumnContainer);
       const $catagoryNameContainer = $('<div>');
       $catagoryNameContainer.addClass('catagory-name').text(gameQuestionSet[i].gameQuestionCategory);
       $catagorycolumnContainer.append($catagoryNameContainer);
@@ -2162,10 +2165,13 @@ class View {
         } else {
           $button.css("color", "red");
         }
-
         $catagoryListOfScoresContainer.append($button);
       }
     }
+
+    const $finalQuestionbutton = $('<button>');
+    $finalQuestionbutton.addClass('final-round-question-button').text('Final Question');
+    $($jeopardBoardContainer).append($finalQuestionbutton);
   }
 
 /**
@@ -2176,8 +2182,7 @@ class View {
 //     console.log(incorrectAnswerSet.size());
 //  console.log(typeof(incorrectAnswerSet))
 
-    // remove any screens after the scoreboard 
-    $('#mainGameContainer').eq(1).remove();
+
     const $choosenQuestionContainer = $('<div>');
     $choosenQuestionContainer.addClass('question-modal-container');
 
@@ -2270,9 +2275,8 @@ class View {
   $noButton.text('No');
 
   /// appends
-  // remove any screens after the scoreboard 
-  console.log($('#mainGameContainer').eq(1));
-  $('#mainGameContainer').eq(1).remove();
+
+
   $('#mainGameContainer').append($endGameScreenContainer)
   $($endGameScreenContainer).append($playerFinalScoreTextContainer)
   $($playerFinalScoreTextContainer).append($playerScoreContainer)
