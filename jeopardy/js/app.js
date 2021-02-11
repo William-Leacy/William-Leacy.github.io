@@ -1971,6 +1971,17 @@ class Model {
     questionAnswered.questionIsAnswered = true;
     console.log(questionAnswered);
   }
+  checkIfAnsweredIsCorrect(correctAnswer, answerChoosen) {
+    console.log(correctAnswer);
+    console.log(answerChoosen.answer);
+    if(answerChoosen.answer === correctAnswer){
+      console.log("correct");
+      this.playerScore = this.playerScore + answerChoosen.questionValue;
+    } else {
+      this.playerScore = this.playerScore - answerChoosen.questionValue;
+      console.log("incorrect");
+    }
+  }
 }
 
 class View {
@@ -2063,7 +2074,7 @@ class View {
     $gameInfromationContainer.append($menuButton);
     $($mainGameScreenContainer).append($roundNumberContainer);
   }
-  displayMainGameScreen(gameQuestionSet,playerName,playerScore,roundNumber,scoreChoosenHandler) {
+  displayMainGameScreen(gameQuestionSet,scoreChoosenHandler) {
     // remove any screens after the scoreboard 
     $('#mainGameContainer').eq(1).remove();
     const $jeopardBoardContainer = $('<div>');
@@ -2101,7 +2112,7 @@ class View {
     }
   }
 
-  displayGameQuestion(questionChoosenObject,randomAnswerSet,updateAnswerhandler) {
+  displayGameQuestion(questionChoosenObject,randomAnswerSet,updateAnswerhandler,checkCorrectAnswerHandler) {
     console.log(questionChoosenObject);
     // remove any screens after the scoreboard 
     $('#mainGameContainer').eq(1).remove();
@@ -2141,12 +2152,15 @@ class View {
       const $answerNumber = $('<div>');
       $answerNumber.addClass('answer-number').text(i+1);
       const $answerButton = $('<button>');
+
+      // add listener to button
       if($answerPlacement === i){
-        $answerButton.addClass('question-answer-butto').text(questionChoosenObject.question);
+        $answerButton.addClass('question-answer-butto').text(questionChoosenObject.answer);
       } else {
         // TO DO set text as randon answer from passed array: randomAnswerSet
         $answerButton.addClass('question-answer-butto').text("Example");
       }
+      $answerButton.on('click', function() { checkCorrectAnswerHandler(questionChoosenObject,$answerButton.text())});
       $($listOfAnswersContainer).append($answerContainer);
       $($answerContainer).append($answerNumber);
       $($answerContainer).append($answerButton);
@@ -2229,7 +2243,11 @@ class Controller {
   }
   handleAnsweredQuestion = (questionAnswered) => {
     console.log(questionAnswered);
-    this.model.updateAnsweredQuestion(questionAnswered)
+    this.model.updateAnsweredQuestion(questionAnswered);
+  }
+  handleCheckIfAnswerIsCorrect = (correctAnswerObj,answerChoosen) => {
+    console.log(answerChoosen);
+    this.model.checkIfAnsweredIsCorrect(answerChoosen,correctAnswerObj);
   }
 
 }
@@ -2258,5 +2276,5 @@ jeopardyGame.view.displayMainGameScoreBoard("will","100",1);
 // jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
 // jeopardyGame.view.displayEndGameScreen(-100);
 console.log(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
-// jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0],[],jeopardyGame.handleAnsweredQuestion);
+jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0],[],jeopardyGame.handleAnsweredQuestion,jeopardyGame.handleCheckIfAnswerIsCorrect);
 // jeopardyGame.model.updateAnsweredQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
