@@ -2056,6 +2056,51 @@ class View {
       }
     }
   }
+
+  displayGameQuestion() {
+    //   <div class="question-modal-container">
+    const $choosenQuestionContainer = $('<div>');
+    $choosenQuestionContainer.addClass('question-modal-container');
+
+    $(this.gameContainer).append($choosenQuestionContainer);
+
+    const $choosenQuestionHeadingContainer = $('<div>');
+    $choosenQuestionHeadingContainer.addClass('question-heading-container');
+    
+    $($choosenQuestionContainer).append($choosenQuestionHeadingContainer);
+
+    const $questionsCatagory = $('<p>').text('Science');
+    const $questionsValue = $('<p>').text('$400');
+
+    $($choosenQuestionHeadingContainer).append($questionsCatagory);
+    $($choosenQuestionHeadingContainer).append($questionsValue);
+
+    const $questionTextContainer = $('<div>');
+    $questionTextContainer.addClass('question-container');
+    $($choosenQuestionContainer).append($questionTextContainer);
+
+    const $questionText = $('<p>');
+    $($questionTextContainer).append($questionText).text('question-answer-button">Mattis pellentesque id nibh tortor id aliquet lectus proin. Fermentum leo vel orci porta non');
+
+    const $listOfAnswersContainer = $('<div>');
+    $listOfAnswersContainer.addClass('list-of-questions-answers-container');
+
+    $($choosenQuestionContainer).append($listOfAnswersContainer);
+    for (let i = 0; i < 4; i++) {
+      const $answerContainer = $('<div>');
+      $answerContainer.addClass('answer-container');
+
+      const $answerNumber = $('<div>');
+      $answerNumber.addClass('answer-number').text(i+1);
+      const $answerButton = $('<button>');
+      $answerButton.addClass('question-answer-butto').text('question-answer-button">Mattis pellentesque id nibh tortor id aliquet lectus proin. Fermentum leo vel orci porta non');
+
+      $($listOfAnswersContainer).append($answerContainer);
+      $($answerContainer).append($answerNumber);
+      $($answerContainer).append($answerButton);
+    }
+
+  }
 }
 class Controller {
   constructor(model, view) {
@@ -2084,7 +2129,8 @@ const jeopardyGame = new Controller(new Model(), new View());
 // console.log(jeopardyGame.model.gameRoundCategories);
 // jeopardyGame.model.generateRandomQuestionFromCategory();
 // console.log(jeopardyGame.model.gameRoundOneQuestions);
-jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
+// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
+jeopardyGame.view.displayGameQuestion();
 // jeopardyGame.view.displayReadGameRulesPromptScreen();
 // jeopardyGame.handleUpdatePlayerName('will');
 // console.log(jeopardyGame.model.playerName);
