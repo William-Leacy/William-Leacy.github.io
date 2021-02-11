@@ -2019,9 +2019,9 @@ class View {
     $readGameRulesContainer.append($noButton);
   }
 
-  displayMainGameScreen(gameQuestionSet,playerName,playerScore,roundNumber,scoreChoosenHandler) {
-
+  displayMainGameScoreBoard(playerName,playerScore,roundNumber) {
     const $mainGameScreenContainer = $('<div>');
+    $mainGameScreenContainer.attr('id','mainGameContainer');
     $mainGameScreenContainer.addClass('main-game-container');
 
     const $gameInfromationContainer = $('<div>');
@@ -2058,10 +2058,14 @@ class View {
     $playerNamePlayerScoreContainer.append($playerScoreContainer);
     $gameInfromationContainer.append($menuButton);
     $($mainGameScreenContainer).append($roundNumberContainer);
+  }
+  displayMainGameScreen(gameQuestionSet,playerName,playerScore,roundNumber,scoreChoosenHandler) {
+
+
 
     const $jeopardBoardContainer = $('<div>');
     $jeopardBoardContainer.addClass('jeopardy-board');
-    $mainGameScreenContainer.append($jeopardBoardContainer);
+    $('#mainGameContainer').append($jeopardBoardContainer);
 
     for (let i = 0; i < 6; i++) {
       const $catagorycolumnContainer = $('<div>');
@@ -2223,11 +2227,15 @@ const jeopardyGame = new Controller(new Model(), new View());
 // console.log(jeopardyGame.model.gameRoundCategories);
 // jeopardyGame.model.generateRandomQuestionFromCategory();
 // console.log(jeopardyGame.model.gameRoundOneQuestions);
-// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
-// jeopardyGame.view.displayGameMenu();
-// jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
-// jeopardyGame.view.displayEndGameScreen(-100);
+
+
 // jeopardyGame.view.displayReadGameRulesPromptScreen();
 // jeopardyGame.handleUpdatePlayerName('will');
 // console.log(jeopardyGame.model.playerName);
 
+
+jeopardyGame.view.displayMainGameScoreBoard("will","100",1);
+jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions);
+// jeopardyGame.view.displayGameMenu();
+// jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
+// jeopardyGame.view.displayEndGameScreen(-100);
