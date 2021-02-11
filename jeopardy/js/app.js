@@ -2101,6 +2101,45 @@ class View {
     }
 
   }
+
+  displayEndGameScreen(playerScore) {
+ 
+  const $endGameScreenContainer= $('<div>');
+  $endGameScreenContainer.addClass('end-screen-container');
+
+  const $playerFinalScoreTextContainer= $('<p>');
+  $playerFinalScoreTextContainer.text('Your Final Score');
+  
+  const $playerScoreContainer= $('<p>');
+  $playerScoreContainer.text('$'+ playerScore);
+  
+  const $playAgainTextContainer = $('<p>');
+  $playAgainTextContainer.text('Play Again?');;
+
+    
+  const $buttonsContainer= $('<div>');
+  $buttonsContainer.addClass('read-game-rules-container');
+  
+    //ToDo set listeners
+  const $yesButton= $('<button>');
+  $yesButton.text('Yes');
+  
+  //ToDo set listeners
+  const $noButton= $('<button>');
+  $noButton.text('No');
+
+  /// appends
+  $(this.gameContainer).append($endGameScreenContainer)
+  $($endGameScreenContainer).append($playerFinalScoreTextContainer)
+  $($playerFinalScoreTextContainer).append($playerScoreContainer)
+  $($endGameScreenContainer).append($playAgainTextContainer)
+
+  $($playAgainTextContainer).append($buttonsContainer)
+  $($buttonsContainer).append($yesButton)
+  $($buttonsContainer).append($noButton)
+
+  
+  }
 }
 class Controller {
   constructor(model, view) {
@@ -2130,7 +2169,8 @@ const jeopardyGame = new Controller(new Model(), new View());
 // jeopardyGame.model.generateRandomQuestionFromCategory();
 // console.log(jeopardyGame.model.gameRoundOneQuestions);
 // jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
-jeopardyGame.view.displayGameQuestion();
+// jeopardyGame.view.displayGameQuestion();
+// jeopardyGame.view.displayEndGameScreen(-100);
 // jeopardyGame.view.displayReadGameRulesPromptScreen();
 // jeopardyGame.handleUpdatePlayerName('will');
 // console.log(jeopardyGame.model.playerName);
