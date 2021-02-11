@@ -1967,6 +1967,10 @@ class Model {
   updatePlayerName(playerChoosenName) {
     this.playerName = playerChoosenName;
   }
+  updateAnsweredQuestion(questionAnswered){
+    questionAnswered.questionIsAnswered = true;
+    console.log(questionAnswered);
+  }
 }
 
 class View {
@@ -2060,9 +2064,8 @@ class View {
     $($mainGameScreenContainer).append($roundNumberContainer);
   }
   displayMainGameScreen(gameQuestionSet,playerName,playerScore,roundNumber,scoreChoosenHandler) {
-
-
-
+    // remove any screens after the scoreboard 
+    $('#mainGameContainer').eq(1).remove();
     const $jeopardBoardContainer = $('<div>');
     $jeopardBoardContainer.addClass('jeopardy-board');
     $('#mainGameContainer').append($jeopardBoardContainer);
@@ -2098,12 +2101,14 @@ class View {
     }
   }
 
-  displayGameQuestion(questionChoosenObject,randomAnswerSet) {
-    //   <div class="question-modal-container">
+  displayGameQuestion(questionChoosenObject,randomAnswerSet,updateAnswerhandler) {
+    console.log(questionChoosenObject);
+    // remove any screens after the scoreboard 
+    $('#mainGameContainer').eq(1).remove();
     const $choosenQuestionContainer = $('<div>');
     $choosenQuestionContainer.addClass('question-modal-container');
 
-    $(this.gameContainer).append($choosenQuestionContainer);
+    $('#mainGameContainer').append($choosenQuestionContainer);
 
     const $choosenQuestionHeadingContainer = $('<div>');
     $choosenQuestionHeadingContainer.addClass('question-heading-container');
@@ -2150,12 +2155,16 @@ class View {
     const $backToJeopardyBoardButton = $('<button>');
     $backToJeopardyBoardButton.text('Back to Board');
     // TODO set listener
+    $backToJeopardyBoardButton.on('click', function() { updateAnswerhandler(questionChoosenObject)});
     $($choosenQuestionContainer).append($backToJeopardyBoardButton);
   }
 
   displayEndGameScreen(playerScore) {
  
+  // remove any screens after the scoreboard 
+  $('#mainGameContainer').eq(3).remove();
   const $endGameScreenContainer= $('<div>');
+
   $endGameScreenContainer.addClass('end-screen-container');
 
   const $playerFinalScoreTextContainer= $('<p>');
@@ -2180,7 +2189,10 @@ class View {
   $noButton.text('No');
 
   /// appends
-  $(this.gameContainer).append($endGameScreenContainer)
+  // remove any screens after the scoreboard 
+  console.log($('#mainGameContainer').eq(1));
+  $('#mainGameContainer').eq(1).remove();
+  $('#mainGameContainer').append($endGameScreenContainer)
   $($endGameScreenContainer).append($playerFinalScoreTextContainer)
   $($playerFinalScoreTextContainer).append($playerScoreContainer)
   $($endGameScreenContainer).append($playAgainTextContainer)
@@ -2196,7 +2208,7 @@ class View {
     $gameMenuContainer.addClass('menu-screen-container');
     const $resetGameButton = $('<button>');
     $resetGameButton.text('Reset Game');
-    $(this.gameContainer).append($gameMenuContainer);
+    $('#mainGameContainer').append($gameMenuContainer);
     $gameMenuContainer.append($resetGameButton);
   }
 }
@@ -2205,6 +2217,7 @@ class Controller {
     this.model = model;
     this.view = view;
     // this.view.displayWelconeScreen(this.handlePlayerNameInput);
+   this.view.displayGameQuestion(this.handleAnsweredQuestion);
   }
 
   handleUpdatePlayerName = (text) => {
@@ -2214,6 +2227,11 @@ class Controller {
   handlePlayerNameInput = (playerNameEntered) => {
   this.model.updatePlayerName(playerNameEntered);
   }
+  handleAnsweredQuestion = (questionAnswered) => {
+    console.log(questionAnswered);
+    this.model.updateAnsweredQuestion(questionAnswered)
+  }
+
 }
 
 const jeopardyGame = new Controller(new Model(), new View());
@@ -2235,7 +2253,10 @@ const jeopardyGame = new Controller(new Model(), new View());
 
 
 jeopardyGame.view.displayMainGameScoreBoard("will","100",1);
-jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions);
+// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions);
 // jeopardyGame.view.displayGameMenu();
 // jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
 // jeopardyGame.view.displayEndGameScreen(-100);
+console.log(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
+// jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0],[],jeopardyGame.handleAnsweredQuestion);
+// jeopardyGame.model.updateAnsweredQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
