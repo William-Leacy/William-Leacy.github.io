@@ -1997,9 +1997,9 @@ class Model {
     console.log(answerChoosen.answer);
     if(answerChoosen.answer === correctAnswer){
       console.log("correct");
-      this.playerScore = this.playerScore + answerChoosen.questionValue;
+      this.playerScore = this.playerScore + parseInt(answerChoosen.questionValue, 10);
     } else {
-      this.playerScore = this.playerScore - answerChoosen.questionValue;
+      this.playerScore = this.playerScore -  parseInt(answerChoosen.questionValue, 10);
       console.log("incorrect");
     }
   }
