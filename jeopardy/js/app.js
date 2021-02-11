@@ -2093,7 +2093,7 @@ class View {
     }
   }
 
-  displayGameQuestion() {
+  displayGameQuestion(questionChoosenObject,randomAnswerSet) {
     //   <div class="question-modal-container">
     const $choosenQuestionContainer = $('<div>');
     $choosenQuestionContainer.addClass('question-modal-container');
@@ -2116,11 +2116,13 @@ class View {
     $($choosenQuestionContainer).append($questionTextContainer);
 
     const $questionText = $('<p>');
-    $($questionTextContainer).append($questionText).text('question-answer-button">Mattis pellentesque id nibh tortor id aliquet lectus proin. Fermentum leo vel orci porta non');
+    $($questionTextContainer).append($questionText).text(questionChoosenObject.question);
 
     const $listOfAnswersContainer = $('<div>');
     $listOfAnswersContainer.addClass('list-of-questions-answers-container');
 
+    // randomly set where the answer will be in the question set
+    const $answerPlacement = Math.floor(Math.random() * 4); 
     $($choosenQuestionContainer).append($listOfAnswersContainer);
     for (let i = 0; i < 4; i++) {
       const $answerContainer = $('<div>');
@@ -2129,13 +2131,21 @@ class View {
       const $answerNumber = $('<div>');
       $answerNumber.addClass('answer-number').text(i+1);
       const $answerButton = $('<button>');
-      $answerButton.addClass('question-answer-butto').text('question-answer-button">Mattis pellentesque id nibh tortor id aliquet lectus proin. Fermentum leo vel orci porta non');
-
+      if($answerPlacement === i){
+        $answerButton.addClass('question-answer-butto').text(questionChoosenObject.question);
+      } else {
+        // TO DO set text as randon answer from passed array: randomAnswerSet
+        $answerButton.addClass('question-answer-butto').text("Example");
+      }
       $($listOfAnswersContainer).append($answerContainer);
       $($answerContainer).append($answerNumber);
       $($answerContainer).append($answerButton);
+     
     }
-
+    const $backToJeopardyBoardButton = $('<button>');
+    $backToJeopardyBoardButton.text('Back to Board');
+    // TODO set listener
+    $($choosenQuestionContainer).append($backToJeopardyBoardButton);
   }
 
   displayEndGameScreen(playerScore) {
@@ -2204,8 +2214,8 @@ const jeopardyGame = new Controller(new Model(), new View());
 // console.log(jeopardyGame.model.gameRoundCategories);
 // jeopardyGame.model.generateRandomQuestionFromCategory();
 // console.log(jeopardyGame.model.gameRoundOneQuestions);
-jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
-// jeopardyGame.view.displayGameQuestion();
+// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,"will","100",1);
+jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
 // jeopardyGame.view.displayEndGameScreen(-100);
 // jeopardyGame.view.displayReadGameRulesPromptScreen();
 // jeopardyGame.handleUpdatePlayerName('will');
