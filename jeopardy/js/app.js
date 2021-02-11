@@ -1957,6 +1957,10 @@ class Model {
     }
   }
 
+/**
+ * 
+ * 
+ */
   randomGenrateRoundCategories() {
     // store list of all categoires in an array for splicing
     const categoires = this.fullListOfquestionCategoires;
@@ -1967,13 +1971,27 @@ class Model {
     }
   }
 
+/**
+ * 
+ * 
+ */
   updatePlayerName(playerChoosenName) {
     this.playerName = playerChoosenName;
   }
+
+/**
+ * 
+ * 
+ */
   updateAnsweredQuestion(questionAnswered){
     questionAnswered.questionIsAnswered = true;
     console.log(questionAnswered);
   }
+
+/**
+ * 
+ * 
+ */
   checkIfAnsweredIsCorrect(correctAnswer, answerChoosen) {
     console.log(correctAnswer);
     console.log(answerChoosen.answer);
@@ -1985,6 +2003,11 @@ class Model {
       console.log("incorrect");
     }
   }
+
+/**
+ * 
+ * 
+ */
   generateListOfRandomIncorrectAnswers() {
     const answersInUse = [];
     for (let i = 0; i < this.gameRoundOneQuestions.length; i++) {
@@ -2006,6 +2029,10 @@ class View {
     this.displayWelconeScreen = this.displayWelconeScreen.bind(this);
   }
 
+/**
+ * 
+ * 
+ */
   displayWelconeScreen(handler) {
     const $welcomeScreen = $('<div>');
     $welcomeScreen.addClass('modal-container');
@@ -2030,6 +2057,10 @@ class View {
     $playersNameInputContainer.append($nextButton);
   }
 
+/**
+ * 
+ * 
+ */
   displayReadGameRulesPromptScreen() {
     const $readGameRulesScreen = $('<div>');
     $readGameRulesScreen.addClass('modal-container');
@@ -2050,6 +2081,10 @@ class View {
     $readGameRulesContainer.append($noButton);
   }
 
+/**
+ * 
+ * 
+ */
   displayMainGameScoreBoard(playerName,playerScore,roundNumber) {
     const $mainGameScreenContainer = $('<div>');
     $mainGameScreenContainer.attr('id','mainGameContainer');
@@ -2090,6 +2125,11 @@ class View {
     $gameInfromationContainer.append($menuButton);
     $($mainGameScreenContainer).append($roundNumberContainer);
   }
+
+/**
+ * 
+ * 
+ */
   displayMainGameScreen(gameQuestionSet,choosenCatagoryScoreHandler) {
     // remove any screens after the scoreboard 
     $('#mainGameContainer').eq(1).remove();
@@ -2128,6 +2168,10 @@ class View {
     }
   }
 
+/**
+ * 
+ * 
+ */
   displayGameQuestion(questionChoosenObject,incorrectAnswerSet,updateAnswerhandler,checkCorrectAnswerHandler) {
 //     console.log(incorrectAnswerSet.size());
 //  console.log(typeof(incorrectAnswerSet))
@@ -2192,6 +2236,10 @@ class View {
     $($choosenQuestionContainer).append($backToJeopardyBoardButton);
   }
 
+/**
+ * 
+ * 
+ */
   displayEndGameScreen(playerScore) {
  
   // remove any screens after the scoreboard 
@@ -2233,9 +2281,12 @@ class View {
   $($playAgainTextContainer).append($buttonsContainer)
   $($buttonsContainer).append($yesButton)
   $($buttonsContainer).append($noButton)
-
-  
   }
+
+/**
+ * 
+ * 
+ */
   displayGameMenu() {
     const $gameMenuContainer = $('<div>');
     $gameMenuContainer.addClass('menu-screen-container');
@@ -2257,13 +2308,26 @@ class Controller {
   //  this.view.displayGameQuestion(this.handleAnsweredQuestion);
   }
 
+/**
+ * 
+ * 
+ */
   handleUpdatePlayerName = (text) => {
     this.model.updatePlayerName(text);
   }
 
+/**
+ * 
+ * 
+ */
   handlePlayerNameInput = (playerNameEntered) => {
   this.model.updatePlayerName(playerNameEntered);
   }
+
+/**
+ * 
+ * 
+ */
   handleAnsweredQuestion = (questionAnswered) => {
     console.log(questionAnswered);
     this.model.updateAnsweredQuestion(questionAnswered);
@@ -2271,10 +2335,20 @@ class Controller {
     this.view.displayMainGameScoreBoard(this.model.playerName,this.model.playerScore,this.model.roundNumber);
     this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore);
   }
+
+/**
+ * 
+ * 
+ */
   handleCheckIfAnswerIsCorrect = (correctAnswerObj,answerChoosen) => {
     console.log(answerChoosen);
     this.model.checkIfAnsweredIsCorrect(answerChoosen,correctAnswerObj);
   }
+
+/**
+ * 
+ * 
+ */
   handleChoosenCatagoryScore = (choosenCatagoryScore) => {
     this.view.clearDisplay();
     this.view.displayMainGameScoreBoard(this.model.playerName,this.model.playerScore,this.model.roundNumber);
