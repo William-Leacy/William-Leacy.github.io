@@ -288,13 +288,11 @@ class Model {
       'What is Xbox?',
       'What is Nintendo?',
       'What is Mario Kart?',
-
       'What is Streets OF Rage?',
       'what is Python?',
       'What is JavaScript?',
       'What is CPU?',
       'What is Amstrad?',
-
       'Who is AC/DC?',
       'Who is Aerosmith?',
       'Who is Alanis Morissette?',
@@ -305,12 +303,10 @@ class Model {
       'Who is Dire Straits?',
       'Who is David Bowie?',
       'Who is Eric Clapton?',
-
       'What is pear?',
       'What is Apple?',
       'What is France?',
       'What is Uk?',];
-
   }
 
         // create a list of all categoires avaible to play
@@ -323,7 +319,6 @@ class Model {
         }
 
         moveToNextStageIfRoundIsFinished() {
-          console.log('moveToNextStageIfRoundIsFinished');
           if (this.gameState.gameRound === 1) {
             if (this.checkIfGameRoundQuestionsAreAnswered(this.gameRoundOneQuestions) === true) {
               this.updateGameStage();
@@ -336,7 +331,6 @@ class Model {
         }
 
         checkIfGameRoundQuestionsAreAnswered(setOfgameRoundQuestions) {
-          console.log('checkIfGameRoundQuestionsAreAnswered');
           let questionAreAnswered = [];
           // check if questions are answered
           for (let i = 0; i < 6; i++) {
@@ -352,7 +346,6 @@ class Model {
         }
 
         updateGameStage() {
-          console.log('updateGameStage');
           if (this.gameState.readyForFinalQuestion === false) {
             this.gameState.readyForFinalQuestion = true;
           }
@@ -363,12 +356,22 @@ class Model {
          */
         updateAnsweredQuestion(questionAnswered) {
           questionAnswered.questionIsAnswered = true;
-          console.log(questionAnswered);
         }
+                /**
+         * bindQuestionAnswered() 
+         * this callback was to alert that both final round qustions are finished
+         * 
+         */
 
         bindFinalQuestionsFinished(callback) {
           this.onFinalQuestionsFinished = callback;
         }
+                /**
+         * bindQuestionAnswered() 
+         * this callback was to alert that a final round question was answers and with the crontller should swith to
+         * next player
+         * 
+         */
 
         bindonAFinalQuestionAnswered(callback) {
           this.onAFinalQuestionAnswered = callback;
@@ -384,7 +387,8 @@ class Model {
 
         }
         /**
-         * 
+         * bindQuestionAnswered() this callback method is for broacasting to the Crontoller 
+         * that a question was answered and the view should be updated to display if it was correct
          * 
          */
 
@@ -392,24 +396,18 @@ class Model {
           this.onQuestionAnswered = callback;
         }
         checkIfAnsweredIsCorrect(correctAnswer, answerChoosen) {
-          console.log(correctAnswer);
-          console.log(answerChoosen);
           if (answerChoosen.answer === correctAnswer) {
-            console.log("correct");
             this.currentPlayer.playerScore = this.currentPlayer.playerScore + parseInt(answerChoosen.questionValue, 10);
             answerChoosen.questionAnsweredCorrectly = "correct";
           } else {
             this.currentPlayer.playerScore = this.currentPlayer.playerScore - parseInt(answerChoosen.questionValue, 10);
             answerChoosen.questionAnsweredCorrectly = "incorrect";
-            console.log("incorrect");
           }
           this.updateAnsweredQuestion(answerChoosen);
           this.onQuestionAnswered(answerChoosen);
         }
 
         checkIfFinalQuestionAnsweredIsCorrect(correctAnswer, answerChoosen) {
-          console.log(correctAnswer);
-          console.log(answerChoosen);
           if (answerChoosen.answer === correctAnswer) {
             console.log("correct");
             this.currentPlayer.playerScore = this.currentPlayer.playerScore + parseInt(answerChoosen.questionValue, 10);
@@ -417,22 +415,24 @@ class Model {
           } else {
             this.currentPlayer.playerScore = this.currentPlayer.playerScore - parseInt(answerChoosen.questionValue, 10);
             answerChoosen.questionAnsweredCorrectly = "incorrect";
-            console.log("incorrect");
           }
           this.updateAnsweredQuestion(answerChoosen);
           this.onFinalQuestionsFinished();
         }
+        // Switch players turn
         updateCurrentPlayer() {
-          console.log(this.currentPlayer);
           if (this.currentPlayer === this.players[0]) {
             this.currentPlayer = this.players[1];
-            console.log(this.currentPlayer);
           } else {
             this.currentPlayer = this.players[0];
-            console.log(this.currentPlayer);
           }
         }
-
+        /**
+         * upDateGameOutCome()
+         * At the moment this function is invoked from the cronoller when a question is answered
+         * 
+         */
+        
         upDateGameOutCome() {
           if(this.players[0].playerScore === this.players[1].playerScore ){
             this.gameState.gameEndedInTie = true;
@@ -441,7 +441,6 @@ class Model {
           } else {
             this.gameState.winner = this.players[1].playerName;
           }
-          console.log(this.gameState);
         }
 
         //   /**
@@ -470,8 +469,10 @@ class Model {
         }
 
         /**
-         * 
-         * 
+         * displayMainGameScoreBoard()
+         * This is the first screen for the app to display. Is is invoked from the controller as a paramater from
+         * the crontroller itselt to the handler for "starting game" displaying this view.
+         * Its pasing a handler to move on to the next screen.
          */
         displayWelconeScreen(handler) {
           const $welcomeScreen = $('<div>');
@@ -487,10 +488,12 @@ class Model {
         }
 
         /**
-         * 
-         * 
+         * displayMainGameScoreBoard()
+         * This method display the players score name icon. It also displays the round number and a status bar
+         * for which players turn it is.
          */
         displayMainGameScoreBoard(players, gameState, currentPlayer) {
+          this.clearDisplay();
           const $mainGameScreenContainer = $('<div>');
           $mainGameScreenContainer.attr('id', 'mainGameContainer');
           $mainGameScreenContainer.addClass('main-game-container');
@@ -536,8 +539,9 @@ class Model {
         }
 
         /**
-         * 
-         * 
+         * displayMainGameScreen()
+         *  This method display the jeopard quesion board and sets a lisnter to each value in the catagory 
+         * it also takes in the final quesiton button handelr which was to open up the final game round.
          */
         displayMainGameScreen(gameQuestionSet, choosenCatagoryScoreHandler, gameState, finalQuestionHandler) {
 
@@ -566,7 +570,6 @@ class Model {
               $button.addClass('catagory-score-value-button').text(gameQuestionSet[i].gameQuestionSet[j].questionValue);
               // if check if button was used from dont set the listener and hide text with css
               if (gameQuestionSet[i].gameQuestionSet[j].questionIsAnswered === false) {
-
                 // set listner on each button 
                 $($button).on('click', function () {
                   choosenCatagoryScoreHandler(gameQuestionSet[i].gameQuestionSet[j])
@@ -594,13 +597,13 @@ class Model {
         }
 
         /**
-         * 
-         * 
+         * displayGameQuestion()
+         * This method display the question view that the player has choosen 
+         * Is paramaters are the question choosen from the main game area, a list of fake answers and two handlers
+         * updateAnswerhandler send a input to the model to update the question as answered
+         * checkCorrectAnswerHandler sends input to check is the passed answers choosen from this view is teh correct answer
          */
         displayGameQuestion(questionChoosenObject, incorrectAnswerSet, updateAnswerhandler, checkCorrectAnswerHandler) {
-          //     console.log(incorrectAnswerSet.size());
-          //  console.log(typeof(incorrectAnswerSet))
-
 
           const $choosenQuestionContainer = $('<div>');
           $choosenQuestionContainer.addClass('question-modal-container');
@@ -688,15 +691,15 @@ class Model {
         }
 
         /**
-         * 
-         * 
+         * displayEndGameScreen()
+         * This Method display the game over screen 
+         * GameState object from the model contains the values for if teh game was a tie or who is the winning player
+         * the players objects is an array of the players objects in the game
          */
         displayEndGameScreen(players, gameState) {
-          console.log("test");
           const $endGameScreenContainer = $('<div>');
           $endGameScreenContainer.addClass('end-screen-container');
           $('#mainGameContainer').append($endGameScreenContainer);
-          console.log("test");
           const $playerFinalScoreTextContainer = $('<p>');
           if (gameState.gameEndedInTie === true) {
             $playerFinalScoreTextContainer.text(`Tie game`);
@@ -715,7 +718,12 @@ class Model {
             $($finalScoreTextContainer).append($playerScoreContainer);
           }
         }
-
+        /**
+         * clearDisplay()
+         * This Method  first emptys the child node because when append the container back 
+         * it would keep the child nodes from the last assingment in the other views.
+         * 
+         */
         clearDisplay() {
           $('#game-screen').empty();
           $('#game-screen').remove();
@@ -746,39 +754,23 @@ class Model {
         constructor(model, view) {
           this.model = model;
           this.view = view;
+          // binding the callbacks from the model 
+          // Controller is obsereving these method form the model for an update about change in the model
           this.model.bindQuestionAnswered(this.onQuestionAnswered);
           this.model.bindFinalQuestionsFinished(this.onFinalQuestionFinished);
           this.model.bindonAFinalQuestionAnswered(this.onAFinalQuestionAnswered);
           this.start()
         }
 
-        onAFinalQuestionAnswered = () => {
-
-          this.view.clearDisplay();
-          this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
-          this.view.displayGameQuestion(this.model.finalQuestionSet[1], this.model.incorrectAnswers, this.handleCheckIfGameIsOver, this.handleCheckIfAnswerIsCorrect);
-
-        }
-
-        onQuestionAnswered = (choosenCatagoryScore) => {
-
-
-          this.view.clearDisplay();
-          this.model.upDateGameOutCome();
-          this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
-          this.view.displayGameQuestion(choosenCatagoryScore, this.model.incorrectAnswers, this.handleAnsweredQuestion, this.handleCheckIfAnswerIsCorrect);
-
-        }
-
-        onFinalQuestionsFinished = () => {
-   
-          this.view.displayEndGameScreen(this.model.players, this.model.gameState);
-        }
-
-
+        /**
+         * start() 
+         *  This function starts the display of the game and passed a hanndle let updates the display to
+         *  main game area
+         */
         start = () => {
           this.view.displayWelconeScreen(this.handleSetupMainGameArea);
         }
+
         /**
          * 
          * 
@@ -790,50 +782,64 @@ class Model {
         }
 
         /**
-         * 
-         * 
+         * handleSetupMainGameArea 
+         * This handler populates the DOM with players score board and the cataogies columns for the players to choose from
          */
         handleSetupMainGameArea = () => {
-          this.view.clearDisplay();
           this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
           this.view.displayMainGameScreen(this.model.gameRoundOneQuestions, this.handleChoosenCatagoryScore, this.model.gameState, this.handleFinalQuestion);
         }
 
         /**
-         * 
-         * 
+         * onQuestionAnswered
+         *  This fucntion is a observer for when a player answers a question it will update the view to diplay if teh question was correct and
+         *  change the color of the answers
+         */
+      onQuestionAnswered = (choosenCatagoryScore) => {
+        this.model.upDateGameOutCome();
+        this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
+        this.view.displayGameQuestion(choosenCatagoryScore, this.model.incorrectAnswers, this.handleAnsweredQuestion, this.handleCheckIfAnswerIsCorrect);
+
+      }
+
+        /**
+         * handleFinalQuestion()
+         * Changed this function to present end game screen whith is onFinalQuestionsFinished handlers job
          */
         handleFinalQuestion = () => {
-          console.log("Final question");
-          this.view.clearDisplay();
+         
           this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
           this.onFinalQuestionsFinished();
           // this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
           // this.view.displayGameQuestion(this.model.finalQuestionSet[0], this.model.incorrectAnswers, this.handleCheckIfGameIsOver, this.handleCheckIfAnswerIsCorrect);
         }
 
-
+         /**
+         * 
+         * 
+         */
 
         handleCheckIfFinalAnswerISCorrect = (correctAnswerObj, answerChoosen) => {
-          console.log(answerChoosen);
           this.model.checkIfFinalQuestionAnsweredIsCorrect(answerChoosen, correctAnswerObj);
         }
-        handleCheckIfGameIsOver = () => {
-          console.log("hcecking if game is over");
-          this.model.checkIfGameIsOver();
-        }
-
-
         /**
          * 
          * 
+         */
+        handleCheckIfGameIsOver = () => {
+          this.model.checkIfGameIsOver();
+        }
+
+        /**
+         * handleAnsweredQuestion()
+         * When a user pressed back to the board button after answering a question this handler is tells model to update
+         * player turn and update that the question was answer so its updated in teh main game area as red and without a listner
          */
         handleAnsweredQuestion = (questionAnswered) => {
           console.log(questionAnswered);
           this.model.updateAnsweredQuestion(questionAnswered);
           this.model.updateCurrentPlayer();
           this.model.moveToNextStageIfRoundIsFinished();
-          this.view.clearDisplay();
           this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
           this.view.displayMainGameScreen(this.model.gameRoundOneQuestions, this.handleChoosenCatagoryScore, this.model.gameState, this.handleFinalQuestion);
         }
@@ -852,11 +858,31 @@ class Model {
          * 
          */
         handleChoosenCatagoryScore = (choosenCatagoryScore) => {
-          this.view.clearDisplay();
           this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName, this.model.finalQuestionSet);
           this.view.displayGameQuestion(choosenCatagoryScore, this.model.incorrectAnswers, this.handleAnsweredQuestion, this.handleCheckIfAnswerIsCorrect);
           console.log(choosenCatagoryScore);
         }
+              /**
+         * 
+         * 
+         */
+      onAFinalQuestionAnswered = () => {
+        this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
+        this.view.displayGameQuestion(this.model.finalQuestionSet[1], this.model.incorrectAnswers, this.handleCheckIfGameIsOver, this.handleCheckIfAnswerIsCorrect);
+
       }
+
+      /**
+         * 
+         * 
+         */
+      onFinalQuestionsFinished = () => {
+        this.view.displayEndGameScreen(this.model.players, this.model.gameState);
+      }
+      }
+
+
+
+
 
       const jeopardyGame = new Controller(new Model(), new View());
