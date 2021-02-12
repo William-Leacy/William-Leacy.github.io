@@ -19,7 +19,7 @@ class Model {
     this.gameState = {
       gameRound: 1,
       allcurrentRoundQuestionsAnswered: false,
-      readyForFinalQuestion: true,
+      readyForFinalQuestion: false,
       gameEndedInTie: false,
       winner: "",
       
@@ -29,21 +29,21 @@ class Model {
       gameQuestionCategory: 'Food',
       gameQuestionSet: [{
         question: 'his country in Europe consumes more spicy Mexican food than any other',
-        answer: 'What is Norway',
+        answer: 'What is Norway?',
         questionValue: '10',
         category: 'Food',
         questionIsAnswered: false,
       },
       {
         question: 'This country does Rioja Wine come from',
-        answer: 'What is Spain',
+        answer: 'What is Spain?',
         questionValue: '20',
         category: 'Food',
         questionIsAnswered: false,
       },
       {
         question: 'This is the fruit that contains the most calories',
-        answer: 'What is Avocado pear',
+        answer: 'What is Avocado pear?',
         questionValue: '30',
         category: 'Food',
         questionIsAnswered: false,
@@ -57,7 +57,7 @@ class Model {
       },
       {
         question: 'This country makes the dish Mousakka',
-        answer: 'What is Greece',
+        answer: 'What is Greece?',
         questionValue: '50',
         category: 'Food',
         questionIsAnswered: false,
@@ -67,7 +67,7 @@ class Model {
         gameQuestionCategory: 'Science',
         gameQuestionSet: [{
             question: 'This process involves heating an ore to obtain a meta',
-            answer: 'What is Smelting',
+            answer: 'What is Smelting?',
             questionValue: '10',
             category: 'Science',
             questionIsAnswered: false,
@@ -75,28 +75,28 @@ class Model {
           },
           {
             question: 'This hazardous substance is euphemistically referred to as "mineral fiber',
-            answer: 'What is Asbestos',
+            answer: 'What is Asbestos?',
             questionValue: '20',
             category: 'Science',
             questionIsAnswered: false,
           },
           {
             question: 'This method of underwater detection is short for "sound navigation and ranging"',
-            answer: 'What is Sonar',
+            answer: 'What is Sonar?',
             questionValue: '30',
             category: 'Science',
             questionIsAnswered: false,
           },
           {
             question: 'This sugar found in fruit is known by what name',
-            answer: 'What is Fructose',
+            answer: 'What is Fructose?',
             questionValue: '40',
             category: 'Science',
             questionIsAnswered: false,
           },
           {
             question: 'This unit of electrical power is equal to one joule per second',
-            answer: ' What is Watt',
+            answer: ' What is Watt?',
             questionValue: '50',
             category: 'Science',
             questionIsAnswered: false,
@@ -106,35 +106,35 @@ class Model {
         gameQuestionCategory: 'Animals',
         gameQuestionSet: [{
             question: 'This type of mammals fly using echolocation',
-            answer: 'What is Bat',
+            answer: 'What is Bat?',
             questionValue: '10',
             category: 'Animals',
             questionIsAnswered: false,
           },
           {
             question: 'This type of animal is the symbol of medicine',
-            answer: 'What is Snake',
+            answer: 'What is Snake?',
             questionValue: '20',
             category: 'Animals',
             questionIsAnswered: false,
           },
           {
             question: 'This animals make a sound called nuzzing',
-            answer: 'Waht is Camel',
+            answer: 'Waht is Camel?',
             questionValue: '30',
             category: 'Animals',
             questionIsAnswered: false,
           },
           {
             question: 'This animal has rectangular pupils',
-            answer: 'What is Goat',
+            answer: 'What is Goat?',
             questionValue: '40',
             category: 'Animals',
             questionIsAnswered: false,
           },
           {
             question: 'This animal appears first in the dictionary',
-            answer: 'What is Aardvark',
+            answer: 'What is Aardvark?',
             questionValue: '50',
             category: 'Animals',
             questionIsAnswered: false,
@@ -147,35 +147,35 @@ class Model {
         gameQuestionCategory: 'Computers',
         gameQuestionSet: [{
             question: 'This common element is used in the manufacture of computer chips',
-            answer: 'What is Silicon',
+            answer: 'What is Silicon?',
             questionValue: '10',
             category: 'Computers',
             questionIsAnswered: false,
           },
           {
             question: 'This first computer used for weather research was named what',
-            answer: 'What is MANIAC',
+            answer: 'What is MANIAC?',
             questionValue: '20',
             category: 'Computers',
             questionIsAnswered: false,
           },
           {
             question: 'This personal computer became a video production system with the addition of New Teks Video Toaster',
-            answer: 'What is Amiga',
+            answer: 'What is Amiga?',
             questionValue: '30',
             category: 'Computers',
             questionIsAnswered: false,
           },
           {
             question: 'This display commonly found in notebook and laptop computers',
-            answer: 'What is Liquid Crystal Display',
+            answer: 'What is Liquid Crystal Display?',
             questionValue: '40',
             category: 'Computers',
             questionIsAnswered: false,
           },
           {
             question: 'This computer language is an acronym of the name of the worlds first computer programme',
-            answer: 'What is ADA',
+            answer: 'What is ADA?',
             questionValue: '50',
             category: 'Computers',
             questionIsAnswered: false,
@@ -188,28 +188,28 @@ class Model {
         gameQuestionCategory: 'Video Games',
         gameQuestionSet: [{
             question: 'Gran Turismo is exclusive to this video game console',
-            answer: 'What is Sony Playstation',
+            answer: 'What is Sony Playstation?',
             questionValue: '10',
             category: 'Video Games',
             questionIsAnswered: false,
           },
           {
             question: 'This video game made the character Master Chief famous',
-            answer: 'What is Halo',
+            answer: 'What is Halo?',
             questionValue: '20',
             category: 'Video Games',
             questionIsAnswered: false,
           },
           {
             question: 'This video game made the Golden Gun famous?',
-            answer: 'Music-question-set-B',
+            answer: 'What is Goldeneye?',
             questionValue: '30',
             category: 'Video Games',
             questionIsAnswered: false,
           },
           {
             question: 'This character is Sega mascot',
-            answer: 'What is Goldeneye',
+            answer: 'What is Sonic?',
             questionValue: '40',
             category: 'Video Games',
             questionIsAnswered: false,
@@ -227,35 +227,35 @@ class Model {
         gameQuestionCategory: 'Music',
         gameQuestionSet: [{
             question: 'Live and let die is a song by this artist',
-            answer: 'Who is Paul McCartney',
+            answer: 'Who is Paul McCartney?',
             questionValue: '10',
             category: 'Music',
             questionIsAnswered: false,
           },
           {
             question: 'This group wrote the songs for the movie Saturday Night Fever',
-            answer: 'Who is Bee Gees',
+            answer: 'Who is Bee Gees?',
             questionValue: '20',
             category: 'Music',
             questionIsAnswered: false,
           },
           {
             question: 'This British group got its name from the title of a 1950 Muddy Waters song',
-            answer: 'Who is Rolling Stones',
+            answer: 'Who is Rolling Stones?',
             questionValue: '30',
             category: 'Music',
             questionIsAnswered: false,
           },
           {
             question: 'This rock group only beardless member is Frank Beard',
-            answer: 'Who is ZZ Top',
+            answer: 'Who is ZZ Top?',
             questionValue: '40',
             category: 'Music',
             questionIsAnswered: false,
           },
           {
             question: 'Music: Tusk was a best-selling album for this band',
-            answer: 'Who is Fleetwood Mac',
+            answer: 'Who is Fleetwood Mac?',
             questionValue: '50',
             category: 'Music',
             questionIsAnswered: false,
@@ -281,7 +281,35 @@ class Model {
       questionAnsweredCorrectly: null,
     },];
 
-    this.incorrectAnswers = ['test','test','test','test','test','test','test','test','test'];
+    this.incorrectAnswers = [
+      'What is oAuth?',
+      'What is curl?',
+      'What is JSON?',
+      'What is Xbox?',
+      'What is Nintendo?',
+      'What is Mario Kart?',
+
+      'What is Streets OF Rage?',
+      'what is Python?',
+      'What is JavaScript?',
+      'What is CPU?',
+      'What is Amstrad?',
+
+      'Who is AC/DC?',
+      'Who is Aerosmith?',
+      'Who is Alanis Morissette?',
+      'Who is Billy Joel?',
+      'Who is Black Sabbath?',
+      'Who is Bob Dylan?',
+      'Who is Bruce Springsteen?',
+      'Who is Dire Straits?',
+      'Who is David Bowie?',
+      'Who is Eric Clapton?',
+
+      'What is pear?',
+      'What is Apple?',
+      'What is France?',
+      'What is Uk?',];
 
   }
 
@@ -403,6 +431,17 @@ class Model {
             this.currentPlayer = this.players[0];
             console.log(this.currentPlayer);
           }
+        }
+
+        upDateGameOutCome() {
+          if(this.players[0].playerScore === this.players[1].playerScore ){
+            this.gameState.gameEndedInTie = true;
+          } else if (this.players[0].playerScore > this.players[1].playerScore) {
+            this.gameState.winner = this.players[0].playerName;
+          } else {
+            this.gameState.winner = this.players[1].playerName;
+          }
+          console.log(this.gameState);
         }
 
         //   /**
@@ -540,7 +579,7 @@ class Model {
           }
 
           const $finalQuestionbutton = $('<button>');
-          $finalQuestionbutton.addClass('final-round-question-button').text('Final Question');
+          $finalQuestionbutton.addClass('final-round-question-button').text('Check Winner');
 
           if (gameState.readyForFinalQuestion === true) {
             $($finalQuestionbutton).on('click', function () {
@@ -653,10 +692,11 @@ class Model {
          * 
          */
         displayEndGameScreen(players, gameState) {
+          console.log("test");
           const $endGameScreenContainer = $('<div>');
           $endGameScreenContainer.addClass('end-screen-container');
-          $('#mainGameContainer').append($endGameScreenContainer)
-
+          $('#mainGameContainer').append($endGameScreenContainer);
+          console.log("test");
           const $playerFinalScoreTextContainer = $('<p>');
           if (gameState.gameEndedInTie === true) {
             $playerFinalScoreTextContainer.text(`Tie game`);
@@ -664,11 +704,11 @@ class Model {
             $playerFinalScoreTextContainer.text(`${gameState.winner} is the Winner!`);
           }
 
-          $($endGameScreenContainer).append($playerFinalScoreTextContainer)
+          $($endGameScreenContainer).append($playerFinalScoreTextContainer);
 
           const $finalScoreTextContainer = $('<p>');
           $finalScoreTextContainer.text(`Final Score`);
-          $($endGameScreenContainer).append($finalScoreTextContainer)
+          $($endGameScreenContainer).append($finalScoreTextContainer);
           for (let i = 0; i < players.length; i++) {
             const $playerScoreContainer = $('<p>');
             $playerScoreContainer.text(`${players[i].playerName}: $${players[i].playerScore} `);
@@ -706,20 +746,9 @@ class Model {
         constructor(model, view) {
           this.model = model;
           this.view = view;
-          // this.view.displayWelconeScreen(this.handlePlayerNameInput);
-
-          // this.view.displayWelconeScreen(this.handlePlayerNameInput);
-          //  this.view.displayGameQuestion(this.handleAnsweredQuestion);
-          //  this.view.displayGameQuestion(this.handleAnsweredQuestion);
-
           this.model.bindQuestionAnswered(this.onQuestionAnswered);
           this.model.bindFinalQuestionsFinished(this.onFinalQuestionFinished);
           this.model.bindonAFinalQuestionAnswered(this.onAFinalQuestionAnswered);
-          // this.view.displayGameQuestion = this.view.displayGameQuestion.bind(this);
-          // this.handlePromtCorrectAnswer =  this.handlePromtCorrectAnswer.bind(this);
-
-
-
           this.start()
         }
 
@@ -735,13 +764,14 @@ class Model {
 
 
           this.view.clearDisplay();
+          this.model.upDateGameOutCome();
           this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
           this.view.displayGameQuestion(choosenCatagoryScore, this.model.incorrectAnswers, this.handleAnsweredQuestion, this.handleCheckIfAnswerIsCorrect);
 
         }
 
         onFinalQuestionsFinished = () => {
-          this.view.clearDisplay();
+   
           this.view.displayEndGameScreen(this.model.players, this.model.gameState);
         }
 
@@ -777,7 +807,9 @@ class Model {
           console.log("Final question");
           this.view.clearDisplay();
           this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
-          this.view.displayGameQuestion(this.model.finalQuestionSet[0], this.model.incorrectAnswers, this.handleCheckIfGameIsOver, this.handleCheckIfAnswerIsCorrect);
+          this.onFinalQuestionsFinished();
+          // this.view.displayMainGameScoreBoard(this.model.players, this.model.gameState, this.model.currentPlayer.playerName);
+          // this.view.displayGameQuestion(this.model.finalQuestionSet[0], this.model.incorrectAnswers, this.handleCheckIfGameIsOver, this.handleCheckIfAnswerIsCorrect);
         }
 
 
