@@ -2,8 +2,13 @@
 ## Description
 This project is a web browser game that takes inspiration from the tv show  Jeopardy!
 
+## Links
+Game is avaiable at:
+https://william-leacy.github.io/jeopardy/
+
 ## Table of Contents
 - [Description](#Description)
+- [Links](#Links)
 - [Install](#Install)
 - [Features](#Features)
 - [Built With](#Built-With])
@@ -11,7 +16,6 @@ This project is a web browser game that takes inspiration from the tv show  Jeop
 - [Design pattern used](#Design-pattern-used)
 - [References](#Tests)
 - [Tests](#Tests)
-- [Links](#Links)
 - [Design Documentation](#Design-Documentation)
     - [User Stories](#User-Stories)
     - [User Case](#User-Case)
@@ -76,7 +80,7 @@ Game Question
 
 
 ## Tests
-## Links
+
 ## Design Documentation 
 
 
