@@ -4,12 +4,12 @@ class Model {
     this.players = [
       {
         playerId: "1",
-        playerName: 'player1',
+        playerName: 'player 1',
         playerScore: 0,
       },
       {
         playerId: "2",
-        playerName: 'player2',
+        playerName: 'player 2',
         playerScore: 0,
       }
     ];
@@ -1715,7 +1715,250 @@ class Model {
     ];
     this.fullListOfquestionCategoires = [];
     this.gameRoundCategories = [];
-    this.gameRoundTwoQuestions = [];
+    this.gameRoundTwoQuestions = [{
+      gameQuestionCategory: 'Science',
+      gameQuestionSet: [{
+        question: 'Science-question-text-set-D',
+        answer: 'Science-question-set-D',
+        questionValue: '10',
+        category: 'Science',
+        questionIsAnswered: false,
+      },
+      {
+        question: 'Science-question-text-set-B',
+        answer: 'Science-question-set-B',
+        questionValue: '20',
+        category: 'Science',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Science-question-text-set-B',
+        answer: 'Science-question-set-B',
+        questionValue: '30',
+        category: 'Science',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Science-question-text-set-A',
+        answer: 'Science-question-set-A',
+        questionValue: '40',
+        category: 'Science',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Science-question-text-set-A',
+        answer: 'Science-question-set-A',
+        questionValue: '50',
+        category: 'Science',
+        questionIsAnswered: true,
+      },
+
+      ],
+
+    },
+    {
+      gameQuestionCategory: 'Films',
+      gameQuestionSet: [{
+        question: 'Films-question-text-set-D',
+        answer: 'Films-question-set-D',
+        questionValue: '10',
+        category: 'Films',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Films-question-text-set-B',
+        answer: 'Films-question-set-B',
+        questionValue: '20',
+        category: 'Films',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Films-question-text-set-B',
+        answer: 'Films-question-set-B',
+        questionValue: '30',
+        category: 'Films',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Films-question-text-set-A',
+        answer: 'Films-question-set-A',
+        questionValue: '40',
+        category: 'Films',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Films-question-text-set-A',
+        answer: 'Films-question-set-A',
+        questionValue: '50',
+        category: 'Films',
+        questionIsAnswered: true,
+      },
+
+      ],
+
+    },
+    {
+      gameQuestionCategory: 'Culture',
+      gameQuestionSet: [{
+        question: 'Culture-question-text-set-D',
+        answer: 'Culture-question-set-D',
+        questionValue: '10',
+        category: 'Culture',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Culture-question-text-set-B',
+        answer: 'Culture-question-set-B',
+        questionValue: '20',
+        category: 'Culture',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Culture-question-text-set-B',
+        answer: 'Culture-question-set-B',
+        questionValue: '30',
+        category: 'Culture',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Culture-question-text-set-A',
+        answer: 'Culture-question-set-A',
+        questionValue: '40',
+        category: 'Culture',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Culture-question-text-set-A',
+        answer: 'Culture-question-set-A',
+        questionValue: '50',
+        category: 'Culture',
+        questionIsAnswered: true,
+      },
+
+      ],
+
+    },
+    {
+      gameQuestionCategory: 'General Knowledge',
+      gameQuestionSet: [{
+        question: 'General Knowledge-question-text-set-D',
+        answer: 'General Knowledge-question-set-D',
+        questionValue: '10',
+        category: 'General Knowledge',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'General Knowledge-question-text-set-B',
+        answer: 'General Knowledge-question-set-B',
+        questionValue: '20',
+        category: 'General Knowledge',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'General Knowledge-question-text-set-B',
+        answer: 'General Knowledge-question-set-B',
+        questionValue: '30',
+        category: 'General Knowledge',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'General Knowledge-question-text-set-A',
+        answer: 'General Knowledge-question-set-A',
+        questionValue: '40',
+        category: 'General Knowledge',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'General Knowledge-question-text-set-A',
+        answer: 'General Knowledge-question-set-A',
+        questionValue: '50',
+        category: 'General Knowledge',
+        questionIsAnswered: true,
+      },
+
+      ],
+
+    },
+    {
+      gameQuestionCategory: 'Music',
+      gameQuestionSet: [{
+        question: 'Music-question-text-set-D',
+        answer: 'Music-question-set-D',
+        questionValue: '10',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Music-question-text-set-B',
+        answer: 'Music-question-set-B',
+        questionValue: '20',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Music-question-text-set-B',
+        answer: 'Music-question-set-B',
+        questionValue: '30',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Music-question-text-set-A',
+        answer: 'Music-question-set-A',
+        questionValue: '40',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Music-question-text-set-A',
+        answer: 'Music-question-set-A',
+        questionValue: '50',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      ],
+    },
+    {
+      gameQuestionCategory: 'Music',
+      gameQuestionSet: [{
+        question: 'Music-question-text-set-D',
+        answer: 'Music-question-set-D',
+        questionValue: '10',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Music-question-text-set-B',
+        answer: 'Music-question-set-B',
+        questionValue: '20',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Music-question-text-set-B',
+        answer: 'Music-question-set-B',
+        questionValue: '30',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Music-question-text-set-A',
+        answer: 'Music-question-set-A',
+        questionValue: '40',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      {
+        question: 'Music-question-text-set-A',
+        answer: 'Music-question-set-A',
+        questionValue: '50',
+        category: 'Music',
+        questionIsAnswered: true,
+      },
+      ],
+    },
+
+    ];
     this.gameRoundOneQuestions = [{
       gameQuestionCategory: 'Science',
       gameQuestionSet: [{
@@ -2127,30 +2370,6 @@ class View {
  * 
  * 
  */
-  displayReadGameRulesPromptScreen() {
-    const $readGameRulesScreen = $('<div>');
-    $readGameRulesScreen.addClass('modal-container');
-
-    const $readGameRulesTitle = $('<h1>').text('Read game rules?');
-
-    const $readGameRulesContainer = $('<div>');
-    $readGameRulesContainer.addClass('read-game-rules-container');
-
-    const $yesButton = $('<button>').text('Yes').attr('id', 'yes-read-game-rules-button');
-    const $noButton = $('<button>').text('No').attr('id', 'yes-read-game-rules-button');
-
-    $(this.gameContainer).append($readGameRulesScreen);
-    $readGameRulesScreen.append($readGameRulesTitle);
-
-    $readGameRulesScreen.append($readGameRulesContainer);
-    $readGameRulesContainer.append($yesButton);
-    $readGameRulesContainer.append($noButton);
-  }
-
-/**
- * 
- * 
- */
   displayMainGameScoreBoard(players,gameState, currentPlayer) {
     const $mainGameScreenContainer = $('<div>');
     $mainGameScreenContainer.attr('id','mainGameContainer');
@@ -2191,11 +2410,6 @@ class View {
     const $gameStatusContainer = $('<div>');
     $gameStatusContainer.addClass('game-status-container').text(`${currentPlayer}'s Turn!`);
 
-    const $menuButton = $('<button>');
-    $menuButton.addClass('menu-button').html('&#9776'); 
-    // set listner
-
-    $gameInfromationContainer.append($menuButton);
     $($mainGameScreenContainer).append($roundNumberContainer);
     $($mainGameScreenContainer).append($gameStatusContainer);
 
@@ -2320,60 +2534,25 @@ class View {
  * 
  * 
  */
-  displayEndGameScreen(playerScore) {
- 
-  // remove any screens after the scoreboard 
-  $('#mainGameContainer').eq(3).remove();
+  displayEndGameScreen(players) {
   const $endGameScreenContainer= $('<div>');
-
   $endGameScreenContainer.addClass('end-screen-container');
+  $('#mainGameContainer').append($endGameScreenContainer)
 
   const $playerFinalScoreTextContainer= $('<p>');
-  $playerFinalScoreTextContainer.text('Your Final Score');
-  
-  const $playerScoreContainer= $('<p>');
-  $playerScoreContainer.text('$'+ playerScore);
-  
-  const $playAgainTextContainer = $('<p>');
-  $playAgainTextContainer.text('Play Again?');;
-
-    
-  const $buttonsContainer= $('<div>');
-  $buttonsContainer.addClass('read-game-rules-container');
-  
-    //ToDo set listeners
-  const $yesButton= $('<button>');
-  $yesButton.text('Yes');
-  
-  //ToDo set listeners
-  const $noButton= $('<button>');
-  $noButton.text('No');
-
-  /// appends
-
-
-  $('#mainGameContainer').append($endGameScreenContainer)
+  $playerFinalScoreTextContainer.text(`${players[0].playerName} is the Winner!`);
   $($endGameScreenContainer).append($playerFinalScoreTextContainer)
-  $($playerFinalScoreTextContainer).append($playerScoreContainer)
-  $($endGameScreenContainer).append($playAgainTextContainer)
 
-  $($playAgainTextContainer).append($buttonsContainer)
-  $($buttonsContainer).append($yesButton)
-  $($buttonsContainer).append($noButton)
+  const $finalScoreTextContainer= $('<p>');
+  $finalScoreTextContainer.text(`Final Score`);
+  $($endGameScreenContainer).append($finalScoreTextContainer)
+  for (let i = 0; i < players.length; i++) {
+    const $playerScoreContainer= $('<p>');
+    $playerScoreContainer.text(`${players[i].playerName}: $${players[i].playerScore} `);
+    $($finalScoreTextContainer).append($playerScoreContainer);
+  }
   }
 
-/**
- * 
- * 
- */
-  displayGameMenu() {
-    const $gameMenuContainer = $('<div>');
-    $gameMenuContainer.addClass('menu-screen-container');
-    const $resetGameButton = $('<button>');
-    $resetGameButton.text('Reset Game');
-    $('#mainGameContainer').append($gameMenuContainer);
-    $gameMenuContainer.append($resetGameButton);
-  }
   clearDisplay() {
     $('#mainGameContainer').remove();
   }
@@ -2460,8 +2639,10 @@ const jeopardyGame = new Controller(new Model(), new View());
 // console.log(jeopardyGame.model.playerName);
 
 // jeopardyGame.model.updateCurrentPlayer();
+
 jeopardyGame.view.displayMainGameScoreBoard(jeopardyGame.model.players,jeopardyGame.model.roundNumber,jeopardyGame.model.currentPlayer.playerName);
-jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,jeopardyGame.handleChoosenCatagoryScore);
+// jeopardyGame.view.displayEndGameScreen(jeopardyGame.model.players);
+// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,jeopardyGame.handleChoosenCatagoryScore);
 // jeopardyGame.view.displayGameMenu();
 // jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
 // jeopardyGame.view.displayEndGameScreen(-100);
@@ -2473,4 +2654,4 @@ jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions
 // jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0],jeopardyGame.model.incorrectAnswers,jeopardyGame.handleAnsweredQuestion);
 
 
-console.log(jeopardyGame.model.gameState.gameRound);
+// console.log(jeopardyGame.model.gameState.gameRound);
