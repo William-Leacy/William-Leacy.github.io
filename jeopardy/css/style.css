@@ -20,6 +20,7 @@ button {
     width: 90%;
     padding: 2%;
     font-family: 'Anton', sans-serif;
+    font-size: x-large;
 }
 
 .modal-container {
@@ -385,6 +386,7 @@ button {
     }
     .question-modal-container {
         background-color: #3081FE;
+        font-size: xx-large;
         height: 800px;
         border: solid 1px;
         border-radius: 5%;
