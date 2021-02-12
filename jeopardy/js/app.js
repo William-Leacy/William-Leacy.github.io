@@ -21,1946 +21,10 @@ class Model {
       allcurrentRoundQuestionsAnswered: false,
       readyForFinalQuestion: true,
       gameEndedInTie: false,
+      winner: "",
       
     }
-    this.listOfGameQuestions = [{
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '100',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '200',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '300',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '400',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '500',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '600',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '700',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '800',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '900',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-A',
-      answer: 'geography-question-set-A',
-      questionValue: '1000',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '100',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '200',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '300',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '400',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '500',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '600',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '700',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '800',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '900',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-B',
-      answer: 'geography-question-set-B',
-      questionValue: '1000',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '100',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '200',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '300',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '400',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '500',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '600',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '700',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '800',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '900',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-C',
-      answer: 'geography-question-set-C',
-      questionValue: '1000',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '100',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '200',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '300',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '400',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '500',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '600',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '700',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '800',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '900',
-      category: 'geography',
-    },
-    {
-      question: 'geography-question-text-set-D',
-      answer: 'geography-question-set-D',
-      questionValue: '1000',
-      category: 'geography',
-    },
 
-    /// /// history-
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '100',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '200',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '300',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '400',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '500',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '600',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '700',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '800',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '900',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-A',
-      answer: 'history-question-set-A',
-      questionValue: '1000',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '100',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '200',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '300',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '400',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '500',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '600',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '700',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '800',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '900',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-B',
-      answer: 'history-question-set-B',
-      questionValue: '1000',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '100',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '200',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '300',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '400',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '500',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '600',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '700',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '800',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '900',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-C',
-      answer: 'history-question-set-C',
-      questionValue: '1000',
-      category: 'history',
-    }, {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '100',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '200',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '300',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '400',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '500',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '600',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '700',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '800',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '900',
-      category: 'history',
-    },
-    {
-      question: 'history-question-text-set-D',
-      answer: 'history-question-set-D',
-      questionValue: '1000',
-      category: 'history',
-    },
-
-    /// //////// General Knowledge-
-
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '100',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '200',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '300',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-uestion-set-A',
-      questionValue: '400',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '500',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '600',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '700',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '800',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '900',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-A',
-      answer: 'General Knowledge-question-set-A',
-      questionValue: '1000',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '100',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '200',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '300',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '400',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '500',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '600',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '700',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '800',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-B',
-      answer: 'General Knowledge-question-set-B',
-      questionValue: '900',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'qGeneral Knowledge-uestion-text-set-B',
-      answer: 'qGeneral Knowledge-uestion-set-B',
-      questionValue: '1000',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-C',
-      answer: 'General Knowledge-question-set-C',
-      questionValue: '100',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-C',
-      answer: 'General Knowledge-question-set-C',
-      questionValue: '200',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'qGeneral Knowledge-uestion-text-set-C',
-      answer: 'General Knowledge-question-set-C',
-      questionValue: '300',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'qGeneral Knowledge-uestion-text-set-C',
-      answer: 'qGeneral Knowledge-uestion-set-C',
-      questionValue: '400',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-C',
-      answer: 'General Knowledge-question-set-C',
-      questionValue: '500',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-C',
-      answer: 'General Knowledge-question-set-C',
-      questionValue: '600',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-C',
-      answer: 'General Knowledge-question-set-C',
-      questionValue: '700',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-C',
-      answer: 'General Knowledge-question-set-C',
-      questionValue: '800',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-C',
-      answer: 'qGeneral Knowledge-uestion-set-C',
-      questionValue: '900',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-C',
-      answer: 'General Knowledge-question-set-C',
-      questionValue: '1000',
-      category: 'General Knowledge',
-    }, {
-      question: 'General Knowledge-question-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '100',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'qGeneral Knowledge-uestion-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '200',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'qGeneral Knowledge-uestion-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '300',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'qGeneral Knowledge-uestion-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '400',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'quGeneral Knowledge-estion-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '500',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '600',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '700',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'General Knowledge-question-text-set-D',
-      answer: 'General Knowledge-question-set-D',
-      questionValue: '800',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'qGeneral Knowledge-uestion-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '900',
-      category: 'General Knowledge',
-    },
-    {
-      question: 'qGeneral Knowledge-uestion-text-set-D',
-      answer: 'qGeneral Knowledge-uestion-set-D',
-      questionValue: '1000',
-      category: 'General Knowledge',
-    },
-    /// /////// Culture-
-
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '100',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '200',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '300',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '400',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '500',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '600',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '700',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '800',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '900',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-A',
-      answer: 'Culture-question-set-A',
-      questionValue: '1000',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '100',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '200',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '300',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '400',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '500',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '600',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '700',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '800',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '900',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-B',
-      answer: 'Culture-question-set-B',
-      questionValue: '1000',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '100',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '200',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '300',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '400',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '500',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '600',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '700',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '800',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '900',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-C',
-      answer: 'Culture-question-set-C',
-      questionValue: '1000',
-      category: 'Culture',
-    }, {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '100',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '200',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '300',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '400',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '500',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '600',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '700',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '800',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '900',
-      category: 'Culture',
-    },
-    {
-      question: 'Culture-question-text-set-D',
-      answer: 'Culture-question-set-D',
-      questionValue: '1000',
-      category: 'Culture',
-    },
-
-    /// //////// Music-
-
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '100',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '200',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '300',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '400',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '500',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '600',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '700',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '800',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '900',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-A',
-      answer: 'Music-question-set-A',
-      questionValue: '1000',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '100',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '200',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '300',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '400',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '500',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '600',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '700',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '800',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '900',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-B',
-      answer: 'Music-question-set-B',
-      questionValue: '1000',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '100',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '200',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '300',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '400',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '500',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '600',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '700',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '800',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '900',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-C',
-      answer: 'Music-question-set-C',
-      questionValue: '1000',
-      category: 'Music',
-    }, {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '100',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '200',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '300',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '400',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '500',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '600',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '700',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '800',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '900',
-      category: 'Music',
-    },
-    {
-      question: 'Music-question-text-set-D',
-      answer: 'Music-question-set-D',
-      questionValue: '1000',
-      category: 'Music',
-    },
-
-    /// /////////// Films-
-
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '100',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '200',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '300',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '400',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '500',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '600',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '700',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '800',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '900',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-A',
-      answer: 'Films-question-set-A',
-      questionValue: '1000',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '100',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '200',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '300',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '400',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '500',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '600',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '700',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '800',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '900',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-B',
-      answer: 'Films-question-set-B',
-      questionValue: '1000',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '100',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '200',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '300',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '400',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '500',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '600',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '700',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '800',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '900',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-C',
-      answer: 'Films-question-set-C',
-      questionValue: '1000',
-      category: 'Films',
-    }, {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '100',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '200',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '300',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '400',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '500',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '600',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '700',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '800',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '900',
-      category: 'Films',
-    },
-    {
-      question: 'Films-question-text-set-D',
-      answer: 'Films-question-set-D',
-      questionValue: '1000',
-      category: 'Films',
-    },
-
-    /// / Science
-
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '100',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '200',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '300',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '400',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '500',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '600',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '700',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '800',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '900',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-A',
-      answer: 'Science-question-set-A',
-      questionValue: '1000',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '100',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '200',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '300',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '400',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '500',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '600',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '700',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '800',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '900',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-B',
-      answer: 'Science-question-set-B',
-      questionValue: '1000',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '100',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '200',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '300',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '400',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '500',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '600',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '700',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '800',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '900',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-C',
-      answer: 'Science-question-set-C',
-      questionValue: '1000',
-      category: 'Science',
-    }, {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '100',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '200',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '300',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '400',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '500',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '600',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '700',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '800',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '900',
-      category: 'Science',
-    },
-    {
-      question: 'Science-question-text-set-D',
-      answer: 'Science-question-set-D',
-      questionValue: '1000',
-      category: 'Science',
-    },
-
-    ];
-    this.fullListOfquestionCategoires = [];
-    this.gameRoundCategories = [];
-    this.gameRoundTwoQuestions = [{
-      gameQuestionCategory: 'Science',
-      gameQuestionSet: [{
-        question: 'Science-question-text-set-D',
-        answer: 'Science-question-set-D',
-        questionValue: '10',
-        category: 'Science',
-        questionIsAnswered: false,
-      },
-      {
-        question: 'Science-question-text-set-B',
-        answer: 'Science-question-set-B',
-        questionValue: '20',
-        category: 'Science',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Science-question-text-set-B',
-        answer: 'Science-question-set-B',
-        questionValue: '30',
-        category: 'Science',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Science-question-text-set-A',
-        answer: 'Science-question-set-A',
-        questionValue: '40',
-        category: 'Science',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Science-question-text-set-A',
-        answer: 'Science-question-set-A',
-        questionValue: '50',
-        category: 'Science',
-        questionIsAnswered: true,
-      },
-
-      ],
-
-    },
-    {
-      gameQuestionCategory: 'Films',
-      gameQuestionSet: [{
-        question: 'Films-question-text-set-D',
-        answer: 'Films-question-set-D',
-        questionValue: '10',
-        category: 'Films',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Films-question-text-set-B',
-        answer: 'Films-question-set-B',
-        questionValue: '20',
-        category: 'Films',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Films-question-text-set-B',
-        answer: 'Films-question-set-B',
-        questionValue: '30',
-        category: 'Films',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Films-question-text-set-A',
-        answer: 'Films-question-set-A',
-        questionValue: '40',
-        category: 'Films',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Films-question-text-set-A',
-        answer: 'Films-question-set-A',
-        questionValue: '50',
-        category: 'Films',
-        questionIsAnswered: true,
-      },
-
-      ],
-
-    },
-    {
-      gameQuestionCategory: 'Culture',
-      gameQuestionSet: [{
-        question: 'Culture-question-text-set-D',
-        answer: 'Culture-question-set-D',
-        questionValue: '10',
-        category: 'Culture',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Culture-question-text-set-B',
-        answer: 'Culture-question-set-B',
-        questionValue: '20',
-        category: 'Culture',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Culture-question-text-set-B',
-        answer: 'Culture-question-set-B',
-        questionValue: '30',
-        category: 'Culture',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Culture-question-text-set-A',
-        answer: 'Culture-question-set-A',
-        questionValue: '40',
-        category: 'Culture',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Culture-question-text-set-A',
-        answer: 'Culture-question-set-A',
-        questionValue: '50',
-        category: 'Culture',
-        questionIsAnswered: true,
-      },
-
-      ],
-
-    },
-    {
-      gameQuestionCategory: 'General Knowledge',
-      gameQuestionSet: [{
-        question: 'General Knowledge-question-text-set-D',
-        answer: 'General Knowledge-question-set-D',
-        questionValue: '10',
-        category: 'General Knowledge',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'General Knowledge-question-text-set-B',
-        answer: 'General Knowledge-question-set-B',
-        questionValue: '20',
-        category: 'General Knowledge',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'General Knowledge-question-text-set-B',
-        answer: 'General Knowledge-question-set-B',
-        questionValue: '30',
-        category: 'General Knowledge',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'General Knowledge-question-text-set-A',
-        answer: 'General Knowledge-question-set-A',
-        questionValue: '40',
-        category: 'General Knowledge',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'General Knowledge-question-text-set-A',
-        answer: 'General Knowledge-question-set-A',
-        questionValue: '50',
-        category: 'General Knowledge',
-        questionIsAnswered: true,
-      },
-
-      ],
-
-    },
-    {
-      gameQuestionCategory: 'Music',
-      gameQuestionSet: [{
-        question: 'Music-question-text-set-D',
-        answer: 'Music-question-set-D',
-        questionValue: '10',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Music-question-text-set-B',
-        answer: 'Music-question-set-B',
-        questionValue: '20',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Music-question-text-set-B',
-        answer: 'Music-question-set-B',
-        questionValue: '30',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Music-question-text-set-A',
-        answer: 'Music-question-set-A',
-        questionValue: '40',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Music-question-text-set-A',
-        answer: 'Music-question-set-A',
-        questionValue: '50',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      ],
-    },
-    {
-      gameQuestionCategory: 'Music',
-      gameQuestionSet: [{
-        question: 'Music-question-text-set-D',
-        answer: 'Music-question-set-D',
-        questionValue: '10',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Music-question-text-set-B',
-        answer: 'Music-question-set-B',
-        questionValue: '20',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Music-question-text-set-B',
-        answer: 'Music-question-set-B',
-        questionValue: '30',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Music-question-text-set-A',
-        answer: 'Music-question-set-A',
-        questionValue: '40',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      {
-        question: 'Music-question-text-set-A',
-        answer: 'Music-question-set-A',
-        questionValue: '50',
-        category: 'Music',
-        questionIsAnswered: true,
-      },
-      ],
-    },
-
-    ];
     this.gameRoundOneQuestions = [{
       gameQuestionCategory: 'Science',
       gameQuestionSet: [{
@@ -2212,6 +276,7 @@ class Model {
       questionValue: '40',
       category: 'Science',
       questionIsAnswered: true,
+      questionAnsweredCorrectly: null,
     },
     {
       question: 'Science-question-text-set-A',
@@ -2219,9 +284,10 @@ class Model {
       questionValue: '50',
       category: 'Science',
       questionIsAnswered: true,
+      questionAnsweredCorrectly: null,
     },];
 
-    this.incorrectAnswers = [];
+    this.incorrectAnswers = ['test','test','test','test','test','test','test','test','test'];
 
   }
 
@@ -2279,15 +345,13 @@ class Model {
     }
   }
 
-  updateGameStage(){
+    updateGameStage(){
     console.log('updateGameStage');
-    if (this.gameState.gameRound < 2) {
-      this.gameState.gameRound++;
-    } else {
+    if (this.gameState.readyForFinalQuestion === false) {
       this.gameState.readyForFinalQuestion = true;
-    }
-    console.log(this.gameState.gameRound);
+    } 
   }
+
 
 /**
  * 
@@ -2306,6 +370,23 @@ class Model {
     console.log(questionAnswered);
   }
   
+  bindFinalQuestionsFinished(callback) {
+    this.onFinalQuestionsFinished = callback;
+  }
+
+  bindonAFinalQuestionAnswered(callback) {
+    this.onAFinalQuestionAnswered = callback;
+  }
+
+  checkIfGameIsOver() {
+  if(checkIfGameRoundQuestionsAreAnswered(this.finalQuestionSet === true)){
+    //callback
+    this.onFinalQuestionsFinished();
+  } else {
+    this.onAFinalQuestionAnswered();
+  }
+
+  }
 /**
  * 
  * 
@@ -2328,6 +409,22 @@ bindQuestionAnswered(callback) {
     }
     this.updateAnsweredQuestion(answerChoosen);
     this.onQuestionAnswered(answerChoosen);
+  }
+
+  checkIfFinalQuestionAnsweredIsCorrect(correctAnswer, answerChoosen) {
+    console.log(correctAnswer);
+    console.log(answerChoosen);
+    if(answerChoosen.answer === correctAnswer){
+      console.log("correct");
+      this.currentPlayer.playerScore = this.currentPlayer.playerScore + parseInt(answerChoosen.questionValue, 10);
+      answerChoosen.questionAnsweredCorrectly = "correct";
+    } else {
+      this.currentPlayer.playerScore = this.currentPlayer.playerScore -  parseInt(answerChoosen.questionValue, 10);
+      answerChoosen.questionAnsweredCorrectly = "incorrect";
+      console.log("incorrect");
+    }
+    this.updateAnsweredQuestion(answerChoosen);
+    this.onFinalQuestionsFinished();
   }
   updateCurrentPlayer() {
     console.log(this.currentPlayer);
@@ -2362,27 +459,7 @@ bindQuestionAnswered(callback) {
 class View {
   constructor() {
     this.gameContainer = document.querySelector('#game-screen');
-    // this.$welcomeScreen = $('<div>');
-    // $(this.gameContainer).append(this.$welcomeScreen);
-    // this.$welcomeScreen.addClass('modal-container');
-    // this.$welcomeTitle = $('<h1>').text('Lets play a game of Jeopardy!');
 
-    // this.$whoIsPLayingText = $('<h2>').text('Who is playing today?');
-
-    // this.$playersNameInputContainer = $('<div>');
-    // this.$playersNameInputContainer.addClass('players-name-input-container');
-
-    // this.$playerNameInput = $('<input>');
-    // this.$nextButton = $('<button>').text('Next').attr('id', 'confirm-player-name-input-button');
-    // $(this.$nextButton).on('click',function(){handler(this.$playerNameInput.val())});
-
-    // $(this.gameContainer).append(this.$welcomeScreen);
-    // this.$welcomeScreen.append(this.$welcomeTitle);
-
-    // this.$welcomeScreen.append(this.$whoIsPLayingText);
-    // this.$welcomeScreen.append(this.$playersNameInputContainer);
-    // this.$playersNameInputContainer.append(this.$playerNameInput);
-    // this.$playersNameInputContainer.append(this.$nextButton);
   }
 
 /**
@@ -2453,7 +530,7 @@ class View {
  * 
  * 
  */
-  displayMainGameScreen(gameQuestionSet, choosenCatagoryScoreHandler, gameState, finalQuestionSet) {
+  displayMainGameScreen(gameQuestionSet, choosenCatagoryScoreHandler, gameState, finalQuestionHandler) {
 
     const $jeopardBoardContainer = $('<div>');
     $jeopardBoardContainer.addClass('jeopardy-board');
@@ -2498,7 +575,7 @@ class View {
     if(gameState.readyForFinalQuestion === true){
       $($finalQuestionbutton).on('click', function () {
         //promt for final question
-        console.log(finalQuestionSet);
+        finalQuestionHandler();
       });
       $($jeopardBoardContainer).append($finalQuestionbutton);
     } else {
@@ -2553,7 +630,7 @@ class View {
       $answerNumber.addClass('answer-number').text(i+1);
       const $answerButton = $('<button>');
 
-      // add listener to button
+
       if($answerPlacement === i){
         $answerButton.addClass('question-answer-button').text(questionChoosenObject.answer);
         if(questionChoosenObject.questionAnsweredCorrectly == 'correct'){
@@ -2561,9 +638,9 @@ class View {
 
         } 
       } else {
-        // TO DO set text as randon answer from passed array: randomAnswerSet
-        // Math.floor(Math.random() * incorrectAnswerSet.length)
-        // $answerButton.addClass('question-answer-butto').text(incorrectAnswerSet[]);
+
+                 let randomAnswer = incorrectAnswerSet[Math.floor(Math.random() * incorrectAnswerSet.length)];
+          $answerButton.text(randomAnswer);
       }
       $($listOfAnswersContainer).append($answerContainer);
       $($answerContainer).append($answerNumber);
@@ -2574,6 +651,10 @@ class View {
       } else {
         $answerButton.on('click', function() { checkCorrectAnswerHandler(questionChoosenObject,$answerButton.text())});
       }
+      $($listOfAnswersContainer).append($answerContainer);
+      $($answerContainer).append($answerNumber);
+      $($answerContainer).append($answerButton);
+
      
     }
     const $answeredPrompt = $('<div>');
@@ -2591,13 +672,18 @@ class View {
  * 
  * 
  */
-  displayEndGameScreen(players) {
+  displayEndGameScreen(players,gameState) {
   const $endGameScreenContainer= $('<div>');
   $endGameScreenContainer.addClass('end-screen-container');
   $('#mainGameContainer').append($endGameScreenContainer)
 
   const $playerFinalScoreTextContainer= $('<p>');
-  $playerFinalScoreTextContainer.text(`${players[0].playerName} is the Winner!`);
+  if(gameState.gameEndedInTie === true){
+    $playerFinalScoreTextContainer.text(`Tie game`);
+  } else {
+    $playerFinalScoreTextContainer.text(`${gameState.winner} is the Winner!`);
+  }
+
   $($endGameScreenContainer).append($playerFinalScoreTextContainer)
 
   const $finalScoreTextContainer= $('<p>');
@@ -2628,12 +714,22 @@ class Controller {
   //  this.view.displayGameQuestion(this.handleAnsweredQuestion);
 
   this.model.bindQuestionAnswered(this.onQuestionAnswered);
+  this.model.bindFinalQuestionsFinished(this.onFinalQuestionFinished);
+  this.model.bindonAFinalQuestionAnswered(this.onAFinalQuestionAnswered);
   // this.view.displayGameQuestion = this.view.displayGameQuestion.bind(this);
   // this.handlePromtCorrectAnswer =  this.handlePromtCorrectAnswer.bind(this);
 
 
 
   this.start()
+  }
+
+  onAFinalQuestionAnswered = () =>{
+    
+    this.view.clearDisplay();
+    this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
+    this.view.displayGameQuestion(this.model.finalQuestionSet[1],this.model.incorrectAnswers,this.handleCheckIfGameIsOver,this.handleCheckIfAnswerIsCorrect);
+
   }
 
   onQuestionAnswered = (choosenCatagoryScore) =>{
@@ -2643,6 +739,11 @@ class Controller {
     this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
     this.view.displayGameQuestion(choosenCatagoryScore,this.model.incorrectAnswers,this.handleAnsweredQuestion,this.handleCheckIfAnswerIsCorrect);
 
+  }
+
+  onFinalQuestionsFinished = () =>{
+    this.view.clearDisplay();
+    this.view.displayEndGameScreen(this.model.players, this.model.gameState);
   }
 
 
@@ -2656,7 +757,7 @@ class Controller {
   handleUpdatePlayerName = (text) => {
     this.model.updatePlayerName(text);
     this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
-    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore);
+    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore,this.handleFinalQuestion);
   }
 
 /**
@@ -2666,16 +767,30 @@ class Controller {
   handleSetupMainGameArea = () => {
     this.view.clearDisplay();
     this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
-    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore,this.model.gameState,this.model.finalQuestionSet);
+    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore,this.model.gameState,this.handleFinalQuestion);
   }
 
   /**
  * 
  * 
  */
-handleFinalQuestion = (finalQuestionSet) => {
-  this.view.displayGameQuestion(finalQuestionSet,this.model.incorrectAnswers,this.handleAnsweredQuestion,this.handleCheckIfAnswerIsCorrect);
-  }
+handleFinalQuestion = () => {
+  console.log("Final question");
+  this.view.clearDisplay();
+  this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
+  this.view.displayGameQuestion(this.model.finalQuestionSet[0],this.model.incorrectAnswers,this.handleCheckIfGameIsOver,this.handleCheckIfAnswerIsCorrect);
+}
+
+
+
+handleCheckIfFinalAnswerISCorrect = (correctAnswerObj,answerChoosen) => {
+  console.log(answerChoosen);
+  this.model.checkIfFinalQuestionAnsweredIsCorrect(answerChoosen,correctAnswerObj);
+}
+handleCheckIfGameIsOver = () => {
+  console.log("hcecking if game is over");
+  this.model.checkIfGameIsOver();
+}
 
 
 /**
@@ -2689,7 +804,7 @@ handleFinalQuestion = (finalQuestionSet) => {
     this.model.moveToNextStageIfRoundIsFinished();
     this.view.clearDisplay();
     this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
-    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore,this.model.gameState,this.model.finalQuestionSet);
+    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore,this.model.gameState,this.handleFinalQuestion);
   }
 
 /**
@@ -2715,35 +830,3 @@ handleFinalQuestion = (finalQuestionSet) => {
 
 const jeopardyGame = new Controller(new Model(), new View());
 
-// Tests
-// jeopardyGame.model.generateListOfAllCategoires();
-// jeopardyGame.model.randomGenrateRoundCategories();
-// console.log(jeopardyGame.model.listOfGameQuestions);
-// console.log(jeopardyGame.model.fullListOfquestionCategoires);
-// console.log(jeopardyGame.model.listOfGameQuestions);
-// console.log(jeopardyGame.model.gameRoundCategories);
-// jeopardyGame.model.generateRandomQuestionFromCategory();
-// console.log(jeopardyGame.model.gameRoundOneQuestions);
-
-// jeopardyGame.model.updateGameState();
-// jeopardyGame.view.displayReadGameRulesPromptScreen();
-// jeopardyGame.handleUpdatePlayerName('will');
-// console.log(jeopardyGame.model.playerName);
-
-// jeopardyGame.model.updateCurrentPlayer();
-
-// jeopardyGame.view.displayMainGameScoreBoard(jeopardyGame.model.players,jeopardyGame.model.roundNumber,jeopardyGame.model.currentPlayer.playerName);
-// jeopardyGame.view.displayEndGameScreen(jeopardyGame.model.players);
-// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,jeopardyGame.handleChoosenCatagoryScore,jeopardyGame.model.gameState,jeopardyGame.model.finalQuestionSet);
-// jeopardyGame.view.displayGameMenu();
-// jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
-// jeopardyGame.view.displayEndGameScreen(-100);
-// console.log(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
-// jeopardyGame.handleCheckIfAnswerIsCorrect);
-// jeopardyGame.model.updateAnsweredQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
-// jeopardyGame.model.generateListOfRandomIncorrectAnswers();
-// console.log(jeopardyGame.model.incorrectAnswers);
-// jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0],jeopardyGame.model.incorrectAnswers,jeopardyGame.handleAnsweredQuestion);
-
-
-// console.log(jeopardyGame.model.gameState.gameRound);
