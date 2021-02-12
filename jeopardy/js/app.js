@@ -1969,6 +1969,7 @@ class Model {
         questionValue: '10',
         category: 'Science',
         questionIsAnswered: false,
+        questionAnsweredCorrectly: null,
       },
       {
         question: 'Science-question-text-set-B',
@@ -2309,16 +2310,24 @@ class Model {
  * 
  * 
  */
+
+bindQuestionAnswered(callback) {
+  this.onQuestionAnswered = callback;
+}
   checkIfAnsweredIsCorrect(correctAnswer, answerChoosen) {
     console.log(correctAnswer);
-    console.log(answerChoosen.answer);
+    console.log(answerChoosen);
     if(answerChoosen.answer === correctAnswer){
       console.log("correct");
       this.currentPlayer.playerScore = this.currentPlayer.playerScore + parseInt(answerChoosen.questionValue, 10);
+      answerChoosen.questionAnsweredCorrectly = "correct";
     } else {
       this.currentPlayer.playerScore = this.currentPlayer.playerScore -  parseInt(answerChoosen.questionValue, 10);
+      answerChoosen.questionAnsweredCorrectly = "incorrect";
       console.log("incorrect");
     }
+    this.updateAnsweredQuestion(answerChoosen);
+    this.onQuestionAnswered(answerChoosen);
   }
   updateCurrentPlayer() {
     console.log(this.currentPlayer);
@@ -2546,19 +2555,30 @@ class View {
 
       // add listener to button
       if($answerPlacement === i){
-        $answerButton.addClass('question-answer-butto').text(questionChoosenObject.answer);
+        $answerButton.addClass('question-answer-button').text(questionChoosenObject.answer);
+        if(questionChoosenObject.questionAnsweredCorrectly == 'correct'){
+          $answerButton.css({"background-color": "green"});
+
+        } 
       } else {
         // TO DO set text as randon answer from passed array: randomAnswerSet
         // Math.floor(Math.random() * incorrectAnswerSet.length)
         // $answerButton.addClass('question-answer-butto').text(incorrectAnswerSet[]);
       }
-      $answerButton.on('click', function() { checkCorrectAnswerHandler(questionChoosenObject,$answerButton.text())});
       $($listOfAnswersContainer).append($answerContainer);
       $($answerContainer).append($answerNumber);
       $($answerContainer).append($answerButton);
+      if(questionChoosenObject.questionAnsweredCorrectly == 'correct' ||questionChoosenObject.questionAnsweredCorrectly == 'incorrect'){
+        $answerButton.css({"background-color": "red"});
+        $('.question-answer-button').css({"background-color": "green"});
+      } else {
+        $answerButton.on('click', function() { checkCorrectAnswerHandler(questionChoosenObject,$answerButton.text())});
+      }
      
     }
-
+    const $answeredPrompt = $('<div>');
+    $answeredPrompt.text(questionChoosenObject.questionAnsweredCorrectly);
+    $($choosenQuestionContainer).append($answeredPrompt);
 
     const $backToJeopardyBoardButton = $('<button>');
     $backToJeopardyBoardButton.text('Back to Board');
@@ -2606,8 +2626,25 @@ class Controller {
     // this.view.displayWelconeScreen(this.handlePlayerNameInput);
   //  this.view.displayGameQuestion(this.handleAnsweredQuestion);
   //  this.view.displayGameQuestion(this.handleAnsweredQuestion);
+
+  this.model.bindQuestionAnswered(this.onQuestionAnswered);
+  // this.view.displayGameQuestion = this.view.displayGameQuestion.bind(this);
+  // this.handlePromtCorrectAnswer =  this.handlePromtCorrectAnswer.bind(this);
+
+
+
   this.start()
   }
+
+  onQuestionAnswered = (choosenCatagoryScore) =>{
+    
+
+    this.view.clearDisplay();
+    this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
+    this.view.displayGameQuestion(choosenCatagoryScore,this.model.incorrectAnswers,this.handleAnsweredQuestion,this.handleCheckIfAnswerIsCorrect);
+
+  }
+
 
   start = () => {
     this.view.displayWelconeScreen(this.handleSetupMainGameArea);
