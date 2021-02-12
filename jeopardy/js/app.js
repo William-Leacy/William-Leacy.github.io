@@ -19,7 +19,9 @@ class Model {
     this.gameState = {
       gameRound: 1,
       allcurrentRoundQuestionsAnswered: false,
-      readyForFinalQuestion: false,
+      readyForFinalQuestion: true,
+      gameEndedInTie: false,
+      
     }
     this.listOfGameQuestions = [{
       question: 'geography-question-text-set-A',
@@ -2203,6 +2205,21 @@ class Model {
     },
 
     ];
+    this.finalQuestionSet = [      {
+      question: 'Science-question-text-set-A',
+      answer: 'Science-question-set-A',
+      questionValue: '40',
+      category: 'Science',
+      questionIsAnswered: true,
+    },
+    {
+      question: 'Science-question-text-set-A',
+      answer: 'Science-question-set-A',
+      questionValue: '50',
+      category: 'Science',
+      questionIsAnswered: true,
+    },];
+
     this.incorrectAnswers = [];
 
   }
@@ -2336,6 +2353,27 @@ class Model {
 class View {
   constructor() {
     this.gameContainer = document.querySelector('#game-screen');
+    // this.$welcomeScreen = $('<div>');
+    // $(this.gameContainer).append(this.$welcomeScreen);
+    // this.$welcomeScreen.addClass('modal-container');
+    // this.$welcomeTitle = $('<h1>').text('Lets play a game of Jeopardy!');
+
+    // this.$whoIsPLayingText = $('<h2>').text('Who is playing today?');
+
+    // this.$playersNameInputContainer = $('<div>');
+    // this.$playersNameInputContainer.addClass('players-name-input-container');
+
+    // this.$playerNameInput = $('<input>');
+    // this.$nextButton = $('<button>').text('Next').attr('id', 'confirm-player-name-input-button');
+    // $(this.$nextButton).on('click',function(){handler(this.$playerNameInput.val())});
+
+    // $(this.gameContainer).append(this.$welcomeScreen);
+    // this.$welcomeScreen.append(this.$welcomeTitle);
+
+    // this.$welcomeScreen.append(this.$whoIsPLayingText);
+    // this.$welcomeScreen.append(this.$playersNameInputContainer);
+    // this.$playersNameInputContainer.append(this.$playerNameInput);
+    // this.$playersNameInputContainer.append(this.$nextButton);
   }
 
 /**
@@ -2345,25 +2383,12 @@ class View {
   displayWelconeScreen(handler) {
     const $welcomeScreen = $('<div>');
     $welcomeScreen.addClass('modal-container');
-
-    const $welcomeTitle = $('<h1>').text('Lets play a game of Jeopardy!');
-
-    const $whoIsPLayingText = $('<h2>').text('Who is playing today?');
-
-    const $playersNameInputContainer = $('<div>');
-    $playersNameInputContainer.addClass('players-name-input-container');
-
-    const $playerNameInput = $('<input>');
-    const $nextButton = $('<button>').text('Next').attr('id', 'confirm-player-name-input-button');
-    $($nextButton).on('click',function(){handler($playerNameInput.val())});
-
+    const $welcomeTitle = $('<h1>').text('Jeopardy!');
+    const $nextButton = $('<button>').text('Play Game').attr('id', 'confirm-player-name-input-button');
+    $($nextButton).on('click',function(){handler()});
     $(this.gameContainer).append($welcomeScreen);
     $welcomeScreen.append($welcomeTitle);
-
-    $welcomeScreen.append($whoIsPLayingText);
-    $welcomeScreen.append($playersNameInputContainer);
-    $playersNameInputContainer.append($playerNameInput);
-    $playersNameInputContainer.append($nextButton);
+    $welcomeScreen.append($nextButton);
   }
 
 /**
@@ -2419,7 +2444,7 @@ class View {
  * 
  * 
  */
-  displayMainGameScreen(gameQuestionSet, choosenCatagoryScoreHandler) {
+  displayMainGameScreen(gameQuestionSet, choosenCatagoryScoreHandler, gameState, finalQuestionSet) {
 
     const $jeopardBoardContainer = $('<div>');
     $jeopardBoardContainer.addClass('jeopardy-board');
@@ -2460,7 +2485,17 @@ class View {
 
     const $finalQuestionbutton = $('<button>');
     $finalQuestionbutton.addClass('final-round-question-button').text('Final Question');
-    $($jeopardBoardContainer).append($finalQuestionbutton);
+
+    if(gameState.readyForFinalQuestion === true){
+      $($finalQuestionbutton).on('click', function () {
+        //promt for final question
+        console.log(finalQuestionSet);
+      });
+      $($jeopardBoardContainer).append($finalQuestionbutton);
+    } else {
+      $($jeopardBoardContainer).append($finalQuestionbutton);
+    }
+
   }
 
 /**
@@ -2523,6 +2558,8 @@ class View {
       $($answerContainer).append($answerButton);
      
     }
+
+
     const $backToJeopardyBoardButton = $('<button>');
     $backToJeopardyBoardButton.text('Back to Board');
     // TODO set listener
@@ -2554,7 +2591,10 @@ class View {
   }
 
   clearDisplay() {
+    $('#game-screen').empty();
+    $('#game-screen').remove();
     $('#mainGameContainer').remove();
+    $('body').append(this.gameContainer);
   }
 }
 class Controller {
@@ -2566,8 +2606,12 @@ class Controller {
     // this.view.displayWelconeScreen(this.handlePlayerNameInput);
   //  this.view.displayGameQuestion(this.handleAnsweredQuestion);
   //  this.view.displayGameQuestion(this.handleAnsweredQuestion);
+  this.start()
   }
 
+  start = () => {
+    this.view.displayWelconeScreen(this.handleSetupMainGameArea);
+  }
 /**
  * 
  * 
@@ -2582,9 +2626,20 @@ class Controller {
  * 
  * 
  */
-  handlePlayerNameInput = (playerNameEntered) => {
-  this.model.updatePlayerName(playerNameEntered);
+  handleSetupMainGameArea = () => {
+    this.view.clearDisplay();
+    this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
+    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore,this.model.gameState,this.model.finalQuestionSet);
   }
+
+  /**
+ * 
+ * 
+ */
+handleFinalQuestion = (finalQuestionSet) => {
+  this.view.displayGameQuestion(finalQuestionSet,this.model.incorrectAnswers,this.handleAnsweredQuestion,this.handleCheckIfAnswerIsCorrect);
+  }
+
 
 /**
  * 
@@ -2597,7 +2652,7 @@ class Controller {
     this.model.moveToNextStageIfRoundIsFinished();
     this.view.clearDisplay();
     this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
-    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore);
+    this.view.displayMainGameScreen(this.model.gameRoundOneQuestions,this.handleChoosenCatagoryScore,this.model.gameState,this.model.finalQuestionSet);
   }
 
 /**
@@ -2615,7 +2670,7 @@ class Controller {
  */
   handleChoosenCatagoryScore = (choosenCatagoryScore) => {
     this.view.clearDisplay();
-    this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName);
+    this.view.displayMainGameScoreBoard(this.model.players,this.model.gameState,this.model.currentPlayer.playerName,this.model.finalQuestionSet);
     this.view.displayGameQuestion(choosenCatagoryScore,this.model.incorrectAnswers,this.handleAnsweredQuestion,this.handleCheckIfAnswerIsCorrect);
     console.log(choosenCatagoryScore);
   }
@@ -2640,9 +2695,9 @@ const jeopardyGame = new Controller(new Model(), new View());
 
 // jeopardyGame.model.updateCurrentPlayer();
 
-jeopardyGame.view.displayMainGameScoreBoard(jeopardyGame.model.players,jeopardyGame.model.roundNumber,jeopardyGame.model.currentPlayer.playerName);
+// jeopardyGame.view.displayMainGameScoreBoard(jeopardyGame.model.players,jeopardyGame.model.roundNumber,jeopardyGame.model.currentPlayer.playerName);
 // jeopardyGame.view.displayEndGameScreen(jeopardyGame.model.players);
-// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,jeopardyGame.handleChoosenCatagoryScore);
+// jeopardyGame.view.displayMainGameScreen(jeopardyGame.model.gameRoundOneQuestions,jeopardyGame.handleChoosenCatagoryScore,jeopardyGame.model.gameState,jeopardyGame.model.finalQuestionSet);
 // jeopardyGame.view.displayGameMenu();
 // jeopardyGame.view.displayGameQuestion(jeopardyGame.model.gameRoundOneQuestions[0].gameQuestionSet[0]);
 // jeopardyGame.view.displayEndGameScreen(-100);
