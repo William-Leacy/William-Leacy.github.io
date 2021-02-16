@@ -30,6 +30,13 @@ h1 {
 
 .jeopardy-game-container {}
 
+
+
+/*
+* 
+* This button was generated from https://www.bestcssbuttongenerator.com/
+*
+*/
 .playgame-button {
     width: 90%;
     padding: 2%;
@@ -179,6 +186,11 @@ h1 {
     justify-content: space-between;
 }
 
+/*
+* 
+* This button was generated from https://www.bestcssbuttongenerator.com/
+*
+*/
 .final-round-question-button {
     width: 90%;
     padding: 2%;
