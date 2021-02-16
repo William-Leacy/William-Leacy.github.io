@@ -6,6 +6,19 @@
  * ----------------------------------------
  */
 
+.main-game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
 body {
     background-color: #002AD8;
     font-family: 'Anton', sans-serif;
@@ -15,93 +28,114 @@ h1 {
     text-align: center;
 }
 
-button {
-    /* margin: auto; */
+.jeopardy-game-container {}
+
+.playgame-button {
     width: 90%;
     padding: 2%;
     font-family: 'Anton', sans-serif;
-    font-size: x-large;
+    font-size: medium;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background: linear-gradient(to bottom, #79bbff 5%, #317ffe 100%);
+    background-color: #79bbff;
+    border-radius: 5px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 11px 44px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
 }
 
-.modal-container {
-    background-color: #3081FE;
-    height: 700px;
-    border: solid 1px;
-    border-radius: 5%;
-    margin: auto;
-    width: 90%;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.players-name-input-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.read-game-rules-container {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-}
-
-.game-rules-text {
-    Margin: auto;
-    padding: 5%;
-}
+/* game score */
 
 .game-information-container {
     background-color: #FEEB3B;
     border: solid 3px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 2%;
+
+    /* height: 15vh; */
+    height: 20%;
+
 }
 
 .player-information {
-    width: 80%;
+    width: 47%;
+    background-color: #fffce2;
+    border: solid 5px;
+    border-color: black;
+    color: black;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-}
-
-.menu-button {
-    width: 10%;
-    font-size: x-large;
-    border: none;
-    margin: auto;
+    align-items: center;
+    font-size: 1em;
+    /* padding: 8%; */
+    border-radius: 7%;
 }
 
 .player-avatar {
-    font-size: xxx-large;
     padding: 3%;
+    width: 40%;
+    height: 85%;
 }
+
 
 .game-round-container {
     background-color: #EC9FF9;
     border: solid 3px;
     text-align: center;
-    font-size: 2em;
+    /* height: 15vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.game-status-container {
+    background-color: #9ff9ba;
+    border: solid 3px;
+    text-align: center;
+    margin-bottom: 1%;
+    /* height: 14vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .jeopardy-board {
-    margin-top: 3%;
-    width: 100%;
+    width: 97%;
     background-color: #3081FE;
     border: solid 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 1em;
+    padding: 1%;
+    height: 100%;
+}
 
+.jeopardy-questions-board {
+
+    width: 98%;
+    height: 80%;
+    background-color: #3081FE;
+    border: solid 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* font-size: 2em; */
 }
 
 .catagory-container {
     background-color: #3081FE;
-    height: 800px;
+    width: 100%;
     border: solid 3px;
     text-align: center;
     padding: 2%;
@@ -111,23 +145,28 @@ button {
 }
 
 .catagory-name {
+
     height: 20%;
-    background-color: #3081FE;
+    background-color: #ffffff;
     border: solid 3px;
     border-color: black;
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1em;
+    padding: 8%;
 }
 
 .catagory-score-value-button {
+    margin: auto;
     font-family: 'Anton', sans-serif;
     background-color: #3081FE;
     border: solid 3px;
     border-color: black;
     color: white;
-    font-size: 2em;
+    font-size: x-large;
+    width: 90%;
 }
 
 .catagory-list-of-scores-conatiner {
@@ -138,29 +177,69 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
-.question-modal-container {
+.final-round-question-button {
+    width: 90%;
+    padding: 2%;
+    font-family: 'Anton', sans-serif;
+    font-size: medium;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background: linear-gradient(to bottom, #79bbff 5%, #317ffe 100%);
+    background-color: #79bbff;
+    border-radius: 5px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    margin: auto;
+    font-weight: bold;
+    padding: 11px 44px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+}
+
+.modal-container {
     background-color: #3081FE;
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 650px;
+    height: 90%;
     border: solid 1px;
     border-radius: 5%;
-
+    margin: auto;
     width: 90%;
     padding: 2%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
 
+.question-modal-container {
+    background-color: #3081FE;
+    font-size: unset;
+    height: 55%;
+    border: solid 1px;
+    border-radius: 5%;
+    /* margin-top: 2%; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.question-heading-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .question-container {
     background-color: white;
-    padding: 2%;
+    padding: 1%;
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -174,16 +253,10 @@ button {
     justify-content: space-between;
     align-items: center;
     height: 50%;
-    padding: 2%;
+    margin-top: 1%;
 }
 
-.question-heading-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .answer-container {
     display: flex;
@@ -203,8 +276,54 @@ button {
     border-right: 0px;
 }
 
+.answer-button {
+    width: 90%;
+    padding: 2%;
+    font-family: 'Anton', sans-serif;
+    font-size: medium;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background-color: #79bbff;
+    border-radius: 5px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 11px 44px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+}
+
+.answer-prompt-container {
+    display: flex;
+    align-content: center;
+    padding: 2%;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.back-to-jeopardy-board-button {
+    width: 90%;
+    padding: 2%;
+    font-family: 'Anton', sans-serif;
+    font-size: medium;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background: linear-gradient(to bottom, #79bbff 5%, #317ffe 100%);
+    background-color: #79bbff;
+    border-radius: 5px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    margin: auto;
+    font-weight: bold;
+    padding: 11px 44px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+}
+
+
 .question-answer-button {
-    background-color: white;
     width: 90%;
     padding: 2%;
     font-family: 'Anton', sans-serif;
@@ -212,9 +331,9 @@ button {
     border-left: 0px;
 }
 
-.end-screen-container{
+.end-screen-container {
     background-color: #3081FE;
-    height: 650px;
+    height: 800px;
     border: solid 1px;
     border-radius: 5%;
     margin-top: 2%;
@@ -226,36 +345,18 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.menu-screen-container {
-    background-color: #3081FE;
-    height: 650px;
-    border: solid 1px;
-    border-radius: 5%;
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    font-size: xx-large;
 }
 
-/**
-    * ----------------------------------------
-    * Style for Desktop or device above 600px 
-    * ----------------------------------------
-    */
 @media (min-width: 600px) {
     body {
         background-color: #002AD8;
         font-family: 'Anton', sans-serif;
     }
+
     .modal-container {
         background-color: #3081FE;
-        height: 800px;
+        height: 90%;
         border: solid 1px;
         border-radius: 5%;
         margin: auto;
@@ -266,85 +367,115 @@ button {
         justify-content: center;
         align-items: center;
     }
-    .players-name-input-container {
-        display: flex;
-        flex-direction: column;
+
+    .jeopardy-game-container {
+        height: 95vh;
     }
-    .read-game-rules-container {
-        display: flex;
-        flex-direction: row;
-        width: 50%;
+
+    .playgame-button {
+        width: 90%;
+        padding: 2%;
+        font-family: 'Anton', sans-serif;
+        font-size: medium;
+        box-shadow: 3px 4px 0px 0px #1564ad;
+        background: linear-gradient(to bottom, #79bbff 5%, #317ffe 100%);
+        background-color: #79bbff;
+        border-radius: 5px;
+        border: 1px solid #337bc4;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 11px 44px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #528ecc;
     }
-    .game-rules-text {
-        Margin: auto;
-        padding: 5%;
-    }
+
+
+    /* game score */
+
     .game-information-container {
         background-color: #FEEB3B;
         border: solid 3px;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
+        padding: 2%;
+        /* height: 15vh; */
+        height: 20%;
     }
+
     .player-information {
-        width: 80%;
+        width: 47%;
+        background-color: #fffce2;
+        border: solid 5px;
+        border-color: black;
+        color: black;
         display: flex;
-        flex-direction: row;
         justify-content: center;
-        font-size: 2em;
+        align-items: center;
+        font-size: 1em;
+        /* padding: 8%; */
+        border-radius: 7%;
     }
-    .menu-button {
-        width: 10%;
-        font-size: x-large;
-        border: none;
-        margin: auto;
-    }
+
     .player-avatar {
-        font-size: xxx-large;
         padding: 3%;
+        width: 40%;
+        height: 85%;
     }
+
 
     .game-round-container {
         background-color: #EC9FF9;
         border: solid 3px;
         text-align: center;
-        font-size: 2em;
+        /* height: 15vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
     }
+
+    .game-status-container {
+        background-color: #9ff9ba;
+        border: solid 3px;
+        text-align: center;
+        margin-bottom: 1%;
+        /* height: 14vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .jeopardy-board {
-        margin-top: 3%;
-        width: 100%;
+        width: 97%;
         background-color: #3081FE;
         border: solid 3px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 1%;
+        height: 100%;
+
     }
 
     .jeopardy-questions-board {
-        margin-top: 3%;
-        width: 100%;
+
+        width: 98%;
+        height: 80%;
         background-color: #3081FE;
         border: solid 3px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        font-size: 2em;
+        /* font-size: 2em; */
     }
-    .final-round-question-button {
-        margin: auto;
-        font-family: 'Anton', sans-serif;
-        background-color: #3081FE;
-        border: solid 3px;
-        border-color: black;
-        color: white;
-        font-size: x-large;
-        width: 100% ;
-    }
-
 
     .catagory-container {
         background-color: #3081FE;
-        height: 400px;
         width: 20%;
         border: solid 3px;
         text-align: center;
@@ -353,17 +484,21 @@ button {
         flex-direction: column;
         justify-content: space-between;
     }
+
     .catagory-name {
+
         height: 20%;
-        background-color: #3081FE;
+        background-color: #ffffff;
         border: solid 3px;
         border-color: black;
-        color: white;
+        color: black;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1em;
+        padding: 8%;
     }
+
     .catagory-score-value-button {
         margin: auto;
         font-family: 'Anton', sans-serif;
@@ -371,9 +506,10 @@ button {
         border: solid 3px;
         border-color: black;
         color: white;
-        font-size:x-large;
+        font-size: x-large;
         width: 90%;
     }
+
     .catagory-list-of-scores-conatiner {
         height: 70%;
         background-color: #3081FE;
@@ -382,32 +518,75 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
     }
-    .question-modal-container {
+
+    .final-round-question-button {
+        width: 90%;
+        padding: 2%;
+        font-family: 'Anton', sans-serif;
+        font-size: medium;
+        box-shadow: 3px 4px 0px 0px #1564ad;
+        background: linear-gradient(to bottom, #79bbff 5%, #317ffe 100%);
+        background-color: #79bbff;
+        border-radius: 5px;
+        border: 1px solid #337bc4;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        margin: auto;
+        font-weight: bold;
+        padding: 11px 44px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #528ecc;
+    }
+
+    .modal-container {
         background-color: #3081FE;
-        font-size: xx-large;
-        height: 800px;
+        height: 90%;
         border: solid 1px;
         border-radius: 5%;
-        margin-top: 2%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
         width: 90%;
         padding: 2%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-
+        justify-content: center;
+        align-items: center;
     }
+
+    .question-modal-container {
+        background-color: #3081FE;
+        font-size: unset;
+        height: 55%;
+        border: solid 1px;
+        border-radius: 5%;
+        /* margin-top: 2%; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .question-heading-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     .question-container {
         background-color: white;
         padding: 1%;
         /* display: flex;
-    justify-content: center;
-    align-items: center; */
+        justify-content: center;
+        align-items: center; */
         text-align: left;
     }
+
     .list-of-questions-answers-container {
 
         display: flex;
@@ -415,20 +594,16 @@ button {
         justify-content: space-between;
         align-items: center;
         height: 50%;
+        margin-top: 1%;
     }
-    .question-heading-container {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+
     .answer-container {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         width: 80%;
     }
+
     .answer-number {
         display: flex;
         justify-content: center;
@@ -439,8 +614,55 @@ button {
         border: solid 1px;
         border-right: 0px;
     }
+
+    .answer-button {
+        width: 90%;
+        padding: 2%;
+        font-family: 'Anton', sans-serif;
+        font-size: medium;
+        box-shadow: 3px 4px 0px 0px #1564ad;
+        background-color: #79bbff;
+        border-radius: 5px;
+        border: 1px solid #337bc4;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 11px 44px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #528ecc;
+    }
+
+    .answer-prompt-container {
+        display: flex;
+        align-content: center;
+        padding: 2%;
+        justify-content: center;
+        font-size: x-large;
+    }
+
+    .back-to-jeopardy-board-button {
+        width: 90%;
+        padding: 2%;
+        font-family: 'Anton', sans-serif;
+        font-size: medium;
+        box-shadow: 3px 4px 0px 0px #1564ad;
+        background: linear-gradient(to bottom, #79bbff 5%, #317ffe 100%);
+        background-color: #79bbff;
+        border-radius: 5px;
+        border: 1px solid #337bc4;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        margin: auto;
+        font-weight: bold;
+        padding: 11px 44px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #528ecc;
+    }
+
     .question-answer-button {
-        background-color: white;
+
         width: 90%;
         padding: 2%;
         font-family: 'Anton', sans-serif;
@@ -448,7 +670,7 @@ button {
         border-left: 0px;
     }
 
-    .end-screen-container{
+    .end-screen-container {
         background-color: #3081FE;
         height: 800px;
         border: solid 1px;
@@ -463,26 +685,5 @@ button {
         justify-content: center;
         align-items: center;
         font-size: xx-large;
-    }
-    .menu-screen-container {
-        background-color: #3081FE;
-        height: 800px;
-        border: solid 1px;
-        border-radius: 5%;
-        margin-top: 2%;
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        padding: 2%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .game-status-container{
-        background-color: #9ff9ba;
-        border: solid 3px;
-        text-align: center;
-        font-size: 2em;
     }
 }

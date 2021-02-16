@@ -78,6 +78,21 @@ Game Question
 * 
 */
 
+Game player icon
+
+/*
+* Author: Gajah Mada Studio, ID 
+* Date: Febuary 12, 2021
+* Type: (svg)
+* publisher: (https://thenounproject.com/term/user/3670112/)
+* Content is available under the Creative Commons Attribution-ShareAlike License.
+* 
+*/
+
+
+
+
+
 
 ## Tests
 
