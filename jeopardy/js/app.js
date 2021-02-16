@@ -515,7 +515,7 @@ class View {
 
       const $playerAvatar = $('<img>');
       $playerAvatar.addClass('player-avatar')
-      $playerAvatar.attr('src', '/Users/imac/personal-repository/jeopardy/jeopardy/images/noun_User_3670112.svg');
+      $playerAvatar.attr('src', 'images/noun_User_3670112.svg');
 
       const $playerNamePlayerScoreContainer = $('<div>');
       $playerNamePlayerScoreContainer.addClass('player-name-player-score-container');
